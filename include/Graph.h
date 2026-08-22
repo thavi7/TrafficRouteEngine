@@ -18,7 +18,10 @@ public:
     void closeRoad(int from, int to);
     void openRoad(int from, int to);
     void setNodePosition(int nodeId, double x, double y);
-
+    
+    void increaseTraffic(int from, int to);
+    void decreaseTraffic(int from, int to);
+    void resetTraffic(int from, int to);
     
     const vector<Node>& getNodes() const;
 };

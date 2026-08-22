@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

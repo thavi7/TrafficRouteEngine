@@ -6,7 +6,7 @@ public:
     int destination;
     int travelTime;
     bool blocked;
-
+    int baseTravelTime;
     Edge(int destination, int travelTime);
 };
 

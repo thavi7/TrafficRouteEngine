@@ -7,6 +7,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
+include(FetchContent)
+
+FetchContent_Declare(
+    SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 3.0.2
+)
+
+FetchContent_MakeAvailable(SFML)
+
 add_executable(TrafficRouteEngine
     src/main.cpp
     src/Edge.cpp
@@ -15,6 +25,11 @@ add_executable(TrafficRouteEngine
     src/Dijkstra.cpp
     src/AStar.cpp
     src/GraphGenerator.cpp
+    src/Visualizer.cpp
+)
+
+target_link_libraries(TrafficRouteEngine PRIVATE
+    SFML::Graphics
 )
 
 add_executable(RoutingBenchmark

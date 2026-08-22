@@ -1,9 +1,16 @@
-#include <iostream>
-
-using namespace std;
+#include "GraphGenerator.h"
+#include "Visualizer.h"
 
 int main() {
-    cout << "Traffic Route Engine\n";
+    Graph graph = GraphGenerator::generateGrid(10, 10);
+
+    Visualizer visualizer(
+        800,
+        600,
+        "Traffic Route Engine"
+    );
+
+    visualizer.run(graph);
 
     return 0;
 }
