@@ -46,7 +46,7 @@ build cmake_object_order_depends_target_TrafficRouteEngine: phony || .
 
 build CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/main.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\main.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -54,7 +54,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj: CXX_COMPILER__TrafficR
 
 build CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\Edge.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -62,7 +62,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj: CXX_COMPILER__TrafficR
 
 build CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\Node.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -70,7 +70,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj: CXX_COMPILER__TrafficR
 
 build CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\Graph.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -78,7 +78,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj: CXX_COMPILER__Traffic
 
 build CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Dijkstra.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\Dijkstra.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -86,7 +86,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__Traf
 
 build CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\AStar.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -94,7 +94,7 @@ build CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj: CXX_COMPILER__Traffic
 
 build CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\GraphGenerator.cpp.obj.d
-  FLAGS = -std=c++17
+  FLAGS = -std=gnu++17
   INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
@@ -117,6 +117,89 @@ build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_ CMakeFi
   TARGET_IMPLIB = libTrafficRouteEngine.dll.a
   TARGET_PDB = TrafficRouteEngine.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target RoutingBenchmark
+
+
+#############################################
+# Order-only phony target for RoutingBenchmark
+
+build cmake_object_order_depends_target_RoutingBenchmark: phony || .
+
+build CMakeFiles/RoutingBenchmark.dir/benchmarks/RoutingBenchmark.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/benchmarks/RoutingBenchmark.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\benchmarks\RoutingBenchmark.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\benchmarks
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/Edge.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Edge.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/Node.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Node.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/Graph.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Graph.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/Dijkstra.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Dijkstra.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/AStar.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\AStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+build CMakeFiles/RoutingBenchmark.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/web$ devolopment/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_RoutingBenchmark
+  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\GraphGenerator.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I"C:/web devolopment/PROJECT/TrafficRouteEngine/include"
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target RoutingBenchmark
+
+
+#############################################
+# Link the executable RoutingBenchmark.exe
+
+build RoutingBenchmark.exe: CXX_EXECUTABLE_LINKER__RoutingBenchmark_ CMakeFiles/RoutingBenchmark.dir/benchmarks/RoutingBenchmark.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Edge.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Node.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Graph.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Dijkstra.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/AStar.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/GraphGenerator.cpp.obj
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = RoutingBenchmark.exe
+  TARGET_IMPLIB = libRoutingBenchmark.dll.a
+  TARGET_PDB = RoutingBenchmark.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
 
 
 #############################################
@@ -144,6 +227,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build RoutingBenchmark: phony RoutingBenchmark.exe
+
 build TrafficRouteEngine: phony TrafficRouteEngine.exe
 
 # =============================================================================
@@ -154,7 +239,7 @@ build TrafficRouteEngine: phony TrafficRouteEngine.exe
 #############################################
 # Folder: C:/web devolopment/PROJECT/TrafficRouteEngine/build
 
-build all: phony TrafficRouteEngine.exe
+build all: phony TrafficRouteEngine.exe RoutingBenchmark.exe
 
 # =============================================================================
 # Built-in targets
