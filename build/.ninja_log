@@ -1,0 +1,19 @@
+# ninja log v7
+45	1469	8090935795675230	CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj	8a5062cde10c0be1
+1541	1737	8090935810630518	TrafficRouteEngine.exe	a38a66fe15ca9c8d
+21	258	8090941445333739	build.ninja	9c4b18787378296
+21	258	8090941445249844	C:/web devolopment/PROJECT/TrafficRouteEngine/build/cmake_install.cmake	9c4b18787378296
+27	533	8090895561634426	CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj	be60ca481f43e8a0
+60	388	8090935795826534	CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj	15b0ba150384fc17
+70	1472	8090935795923410	CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj	37e34de01ac23d52
+82	1540	8090935796049029	CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj	555b64abeabe002c
+96	1526	8090935796176643	CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj	fd8d92696663562b
+2	273	8090941445333739	build.ninja	9c4b18787378296
+2	273	8090941445333739	C:/web devolopment/PROJECT/TrafficRouteEngine/build/cmake_install.cmake	9c4b18787378296
+48	1418	8090941446527392	CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj	194d46b6e2e7aaea
+27	1433	8090941446331888	CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj	8a5062cde10c0be1
+1436	1678	8090941460382934	TrafficRouteEngine.exe	9655cf972b80d017
+6	1249	8090943087533491	CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj	fd8d92696663562b
+1250	1427	8090943099979002	TrafficRouteEngine.exe	9655cf972b80d017
+6	1120	8090943784149574	CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj	8a5062cde10c0be1
+1121	1284	8090943795298477	TrafficRouteEngine.exe	9655cf972b80d017

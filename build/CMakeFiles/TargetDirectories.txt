@@ -1,0 +1,3 @@
+C:/web devolopment/PROJECT/TrafficRouteEngine/build/CMakeFiles/TrafficRouteEngine.dir
+C:/web devolopment/PROJECT/TrafficRouteEngine/build/CMakeFiles/edit_cache.dir
+C:/web devolopment/PROJECT/TrafficRouteEngine/build/CMakeFiles/rebuild_cache.dir
