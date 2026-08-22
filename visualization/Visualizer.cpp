@@ -47,6 +47,13 @@ bool Visualizer::isRouteEdge(const vector<int>& path, int from, int to) {
 
     return false;
 }
+bool Visualizer::routeAffected(
+    const vector<int>& path,
+    int from,
+    int to
+) {
+    return isRouteEdge(path, from, to);
+}
 
 int Visualizer::getClickedNode(
     const Graph& graph,
@@ -262,84 +269,55 @@ void Visualizer::run(Graph& graph) {
                     source != -1 && destination != -1) {
 
                     if (key->code == sf::Keyboard::Key::Up) {
-                        graph.increaseTraffic(
-                            selectedFrom,
-                            selectedTo
-                        );
+    graph.increaseTraffic(selectedFrom, selectedTo);
 
-                        cout << "\nTraffic increased on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo
-                             << "\n";
+    cout << "\nTraffic increased on road "
+         << selectedFrom << " <-> " << selectedTo << "\n";
 
-                        calculateRoute(
-                            graph,
-                            source,
-                            destination,
-                            route
-                        );
-                    }
+    if (routeAffected(route.path, selectedFrom, selectedTo)) {
+        calculateRoute(graph, source, destination, route);
+    } else {
+        cout << "Current route is not affected. No rerouting needed.\n";
+    }
+}
 
                     if (key->code == sf::Keyboard::Key::Down) {
-                        graph.decreaseTraffic(
-                            selectedFrom,
-                            selectedTo
-                        );
+    graph.decreaseTraffic(selectedFrom, selectedTo);
 
-                        cout << "\nTraffic decreased on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo
-                             << "\n";
+    cout << "\nTraffic decreased on road "
+         << selectedFrom << " <-> " << selectedTo << "\n";
 
-                        calculateRoute(
-                            graph,
-                            source,
-                            destination,
-                            route
-                        );
-                    }
+    if (routeAffected(route.path, selectedFrom, selectedTo)) {
+        calculateRoute(graph, source, destination, route);
+    } else {
+        cout << "Current route is not affected. No rerouting needed.\n";
+    }
+}
 
                     if (key->code == sf::Keyboard::Key::R) {
-                        graph.resetTraffic(
-                            selectedFrom,
-                            selectedTo
-                        );
+    graph.resetTraffic(selectedFrom, selectedTo);
 
-                        cout << "\nTraffic reset on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo
-                             << "\n";
+    cout << "\nTraffic reset on road "
+         << selectedFrom << " <-> " << selectedTo << "\n";
 
-                        calculateRoute(
-                            graph,
-                            source,
-                            destination,
-                            route
-                        );
-                    }
-
+    if (routeAffected(route.path, selectedFrom, selectedTo)) {
+        calculateRoute(graph, source, destination, route);
+    } else {
+        cout << "Current route is not affected. No rerouting needed.\n";
+    }
+}
                     if (key->code == sf::Keyboard::Key::C) {
-                        graph.closeRoad(
-                            selectedFrom,
-                            selectedTo
-                        );
+    graph.closeRoad(selectedFrom, selectedTo);
 
-                        cout << "\nRoad closed: "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo
-                             << "\n";
+    cout << "\nRoad closed: "
+         << selectedFrom << " <-> " << selectedTo << "\n";
 
-                        calculateRoute(
-                            graph,
-                            source,
-                            destination,
-                            route
-                        );
-                    }
+    if (routeAffected(route.path, selectedFrom, selectedTo)) {
+        calculateRoute(graph, source, destination, route);
+    } else {
+        cout << "Current route is not affected. No rerouting needed.\n";
+    }
+}
 
                     if (key->code == sf::Keyboard::Key::O) {
                         graph.openRoad(

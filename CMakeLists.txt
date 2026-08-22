@@ -5,7 +5,11 @@ project(TrafficRouteEngine VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/visualization
+)
 
 include(FetchContent)
 
@@ -25,7 +29,7 @@ add_executable(TrafficRouteEngine
     src/Dijkstra.cpp
     src/AStar.cpp
     src/GraphGenerator.cpp
-    src/Visualizer.cpp
+    visualization/Visualizer.cpp
 )
 
 target_link_libraries(TrafficRouteEngine PRIVATE

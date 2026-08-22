@@ -13,6 +13,7 @@ private:
     sf::Font font;
 
     bool isRouteEdge(const vector<int>& path, int from, int to);
+    bool routeAffected(const vector<int>& path, int from, int to);
     int getClickedNode(const Graph& graph, sf::Vector2i mousePosition);
     pair<int, int> getClickedRoad(const Graph& graph, sf::Vector2i mousePosition);
     sf::Color getTrafficColor(const Edge& edge);
