@@ -107,6 +107,15 @@ build CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
 
+build CMakeFiles/TrafficRouteEngine.dir/src/LPAStar.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/LPAStar.cpp || cmake_object_order_depends_target_TrafficRouteEngine
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\LPAStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization -IC:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/include
+  OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
+
 build CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_ C$:/PROJECT/TrafficRouteEngine/visualization/Visualizer.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\visualization\Visualizer.cpp.obj.d
@@ -124,7 +133,7 @@ build CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj: CXX_CO
 #############################################
 # Link the executable TrafficRouteEngine.exe
 
-build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_ CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj | _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-build/lib/libfreetype.a || _deps/sfml-build/lib/libfreetype.a _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-build/lib/libsfml-window.a
+build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_ CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/LPAStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj | _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-build/lib/libfreetype.a || _deps/sfml-build/lib/libfreetype.a _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-build/lib/libsfml-window.a
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics.a  _deps/sfml-build/lib/libsfml-window.a  _deps/sfml-build/lib/libsfml-system.a  -lopengl32  -lwinmm  -lgdi32  _deps/sfml-build/lib/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
   POST_BUILD = cd .
@@ -135,87 +144,269 @@ build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_ CMakeFi
   TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
 
 # =============================================================================
-# Object build statements for EXECUTABLE target RoutingBenchmark
+# Object build statements for EXECUTABLE target SelectiveAstar
 
 
 #############################################
-# Order-only phony target for RoutingBenchmark
+# Order-only phony target for SelectiveAstar
 
-build cmake_object_order_depends_target_RoutingBenchmark: phony || .
+build cmake_object_order_depends_target_SelectiveAstar: phony || .
 
-build CMakeFiles/RoutingBenchmark.dir/benchmarks/RoutingBenchmark.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/benchmarks/RoutingBenchmark.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\benchmarks\RoutingBenchmark.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/tests/SelectiveAstar.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/tests/SelectiveAstar.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\tests\SelectiveAstar.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\benchmarks
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/Edge.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Edge.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/Edge.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\Edge.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/Node.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Node.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/Node.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\Node.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/Graph.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Graph.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/Graph.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\Graph.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Dijkstra.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\Dijkstra.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Dijkstra.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\Dijkstra.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/AStar.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\AStar.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/AStar.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\AStar.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
-build CMakeFiles/RoutingBenchmark.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__RoutingBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_RoutingBenchmark
-  DEP_FILE = CMakeFiles\RoutingBenchmark.dir\src\GraphGenerator.cpp.obj.d
+build CMakeFiles/SelectiveAstar.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\GraphGenerator.cpp.obj.d
   FLAGS = -std=gnu++17
   INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
-  OBJECT_FILE_DIR = CMakeFiles\RoutingBenchmark.dir\src
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
+
+build CMakeFiles/SelectiveAstar.dir/src/LPAStar.cpp.obj: CXX_COMPILER__SelectiveAstar_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/LPAStar.cpp || cmake_object_order_depends_target_SelectiveAstar
+  DEP_FILE = CMakeFiles\SelectiveAstar.dir\src\LPAStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SelectiveAstar.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target RoutingBenchmark
+# Link build statements for EXECUTABLE target SelectiveAstar
 
 
 #############################################
-# Link the executable RoutingBenchmark.exe
+# Link the executable SelectiveAstar.exe
 
-build RoutingBenchmark.exe: CXX_EXECUTABLE_LINKER__RoutingBenchmark_ CMakeFiles/RoutingBenchmark.dir/benchmarks/RoutingBenchmark.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Edge.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Node.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Graph.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/Dijkstra.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/AStar.cpp.obj CMakeFiles/RoutingBenchmark.dir/src/GraphGenerator.cpp.obj
+build SelectiveAstar.exe: CXX_EXECUTABLE_LINKER__SelectiveAstar_ CMakeFiles/SelectiveAstar.dir/tests/SelectiveAstar.cpp.obj CMakeFiles/SelectiveAstar.dir/src/Edge.cpp.obj CMakeFiles/SelectiveAstar.dir/src/Node.cpp.obj CMakeFiles/SelectiveAstar.dir/src/Graph.cpp.obj CMakeFiles/SelectiveAstar.dir/src/Dijkstra.cpp.obj CMakeFiles/SelectiveAstar.dir/src/AStar.cpp.obj CMakeFiles/SelectiveAstar.dir/src/GraphGenerator.cpp.obj CMakeFiles/SelectiveAstar.dir/src/LPAStar.cpp.obj
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\RoutingBenchmark.dir
+  OBJECT_DIR = CMakeFiles\SelectiveAstar.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = RoutingBenchmark.exe
-  TARGET_IMPLIB = libRoutingBenchmark.dll.a
-  TARGET_PDB = RoutingBenchmark.exe.dbg
-  TARGET_SUPPORT_DIR = CMakeFiles\RoutingBenchmark.dir
+  TARGET_FILE = SelectiveAstar.exe
+  TARGET_IMPLIB = libSelectiveAstar.dll.a
+  TARGET_PDB = SelectiveAstar.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\SelectiveAstar.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target LPABenchmark
+
+
+#############################################
+# Order-only phony target for LPABenchmark
+
+build cmake_object_order_depends_target_LPABenchmark: phony || .
+
+build CMakeFiles/LPABenchmark.dir/tests/LPABenchmark.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/tests/LPABenchmark.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\tests\LPABenchmark.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/Edge.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\Edge.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/Node.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\Node.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/Graph.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\Graph.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/Dijkstra.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Dijkstra.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\Dijkstra.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/AStar.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\AStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\GraphGenerator.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+build CMakeFiles/LPABenchmark.dir/src/LPAStar.cpp.obj: CXX_COMPILER__LPABenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/LPAStar.cpp || cmake_object_order_depends_target_LPABenchmark
+  DEP_FILE = CMakeFiles\LPABenchmark.dir\src\LPAStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\LPABenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target LPABenchmark
+
+
+#############################################
+# Link the executable LPABenchmark.exe
+
+build LPABenchmark.exe: CXX_EXECUTABLE_LINKER__LPABenchmark_ CMakeFiles/LPABenchmark.dir/tests/LPABenchmark.cpp.obj CMakeFiles/LPABenchmark.dir/src/Edge.cpp.obj CMakeFiles/LPABenchmark.dir/src/Node.cpp.obj CMakeFiles/LPABenchmark.dir/src/Graph.cpp.obj CMakeFiles/LPABenchmark.dir/src/Dijkstra.cpp.obj CMakeFiles/LPABenchmark.dir/src/AStar.cpp.obj CMakeFiles/LPABenchmark.dir/src/GraphGenerator.cpp.obj CMakeFiles/LPABenchmark.dir/src/LPAStar.cpp.obj
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\LPABenchmark.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = LPABenchmark.exe
+  TARGET_IMPLIB = libLPABenchmark.dll.a
+  TARGET_PDB = LPABenchmark.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\LPABenchmark.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target HybridBenchmark
+
+
+#############################################
+# Order-only phony target for HybridBenchmark
+
+build cmake_object_order_depends_target_HybridBenchmark: phony || .
+
+build CMakeFiles/HybridBenchmark.dir/tests/HybridBenchmark.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/tests/HybridBenchmark.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\tests\HybridBenchmark.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/Edge.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Edge.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\Edge.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/Node.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Node.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\Node.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/Graph.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/Graph.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\Graph.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/AStar.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/AStar.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\AStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/GraphGenerator.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/GraphGenerator.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\GraphGenerator.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+build CMakeFiles/HybridBenchmark.dir/src/LPAStar.cpp.obj: CXX_COMPILER__HybridBenchmark_unscanned_ C$:/PROJECT/TrafficRouteEngine/src/LPAStar.cpp || cmake_object_order_depends_target_HybridBenchmark
+  DEP_FILE = CMakeFiles\HybridBenchmark.dir\src\LPAStar.cpp.obj.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  OBJECT_FILE_DIR = CMakeFiles\HybridBenchmark.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target HybridBenchmark
+
+
+#############################################
+# Link the executable HybridBenchmark.exe
+
+build HybridBenchmark.exe: CXX_EXECUTABLE_LINKER__HybridBenchmark_ CMakeFiles/HybridBenchmark.dir/tests/HybridBenchmark.cpp.obj CMakeFiles/HybridBenchmark.dir/src/Edge.cpp.obj CMakeFiles/HybridBenchmark.dir/src/Node.cpp.obj CMakeFiles/HybridBenchmark.dir/src/Graph.cpp.obj CMakeFiles/HybridBenchmark.dir/src/AStar.cpp.obj CMakeFiles/HybridBenchmark.dir/src/GraphGenerator.cpp.obj CMakeFiles/HybridBenchmark.dir/src/LPAStar.cpp.obj
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\HybridBenchmark.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = HybridBenchmark.exe
+  TARGET_IMPLIB = libHybridBenchmark.dll.a
+  TARGET_PDB = HybridBenchmark.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\HybridBenchmark.dir
 
 
 #############################################
@@ -3910,7 +4101,11 @@ build _deps/vorbis-build/lib/install/strip: phony _deps/vorbis-build/lib/CMakeFi
 
 build FLAC: phony _deps/sfml-build/lib/libFLAC.a
 
-build RoutingBenchmark: phony RoutingBenchmark.exe
+build HybridBenchmark: phony HybridBenchmark.exe
+
+build LPABenchmark: phony LPABenchmark.exe
+
+build SelectiveAstar: phony SelectiveAstar.exe
 
 build TrafficRouteEngine: phony TrafficRouteEngine.exe
 
@@ -3972,7 +4167,7 @@ build vorbisfile: phony _deps/sfml-build/lib/libvorbisfile.a
 #############################################
 # Folder: C:/PROJECT/TrafficRouteEngine/build
 
-build all: phony TrafficRouteEngine.exe RoutingBenchmark.exe _deps/sfml-build/all
+build all: phony TrafficRouteEngine.exe SelectiveAstar.exe LPABenchmark.exe HybridBenchmark.exe _deps/sfml-build/all
 
 # =============================================================================
 

@@ -29,6 +29,7 @@ add_executable(TrafficRouteEngine
     src/Dijkstra.cpp
     src/AStar.cpp
     src/GraphGenerator.cpp
+    src/LPAStar.cpp
     visualization/Visualizer.cpp
 )
 
@@ -36,12 +37,33 @@ target_link_libraries(TrafficRouteEngine PRIVATE
     SFML::Graphics
 )
 
-add_executable(RoutingBenchmark
-    benchmarks/RoutingBenchmark.cpp
+add_executable(SelectiveAstar
+    tests/SelectiveAstar.cpp
     src/Edge.cpp
     src/Node.cpp
     src/Graph.cpp
     src/Dijkstra.cpp
     src/AStar.cpp
     src/GraphGenerator.cpp
+    src/LPAStar.cpp
+)
+
+add_executable(LPABenchmark
+    tests/LPABenchmark.cpp
+    src/Edge.cpp
+    src/Node.cpp
+    src/Graph.cpp
+    src/Dijkstra.cpp
+    src/AStar.cpp
+    src/GraphGenerator.cpp
+    src/LPAStar.cpp
+)
+add_executable(HybridBenchmark
+tests/HybridBenchmark.cpp
+src/Edge.cpp
+src/Node.cpp
+src/Graph.cpp
+src/AStar.cpp
+src/GraphGenerator.cpp
+src/LPAStar.cpp
 )
