@@ -1,5 +1,7 @@
 #include "Visualizer.h"
 #include "AStar.h"
+#include "Dijkstra.h"
+#include <chrono>
 #include <cmath>
 #include <iostream>
 
@@ -7,94 +9,117 @@ using namespace std;
 
 namespace {
 
-void printRouteResult(
+int previousLpaNodes = 0;
+
+struct AlgorithmStats {
+    RouteResult result;
+    double timeMs = 0.0;
+    int nodesProcessed = 0;
+    bool repair = false;
+    bool reusedState = false;
+};
+
+template <typename Function>
+AlgorithmStats measureAlgorithm(Function function) {
+    auto start = chrono::high_resolution_clock::now();
+
+    RouteResult result = function();
+
+    auto end = chrono::high_resolution_clock::now();
+
+    double timeMs =
+        chrono::duration<double, milli>(
+            end - start
+        ).count();
+
+    AlgorithmStats stats;
+    stats.result = result;
+    stats.timeMs = timeMs;
+    stats.nodesProcessed = result.nodesExplored;
+
+    return stats;
+}
+
+void printAlgorithmStats(
     const string& name,
-    const RouteResult& result
+    const AlgorithmStats& stats
 ) {
-    cout << "\n========================================\n";
-    cout << name << "\n";
-    cout << "========================================\n";
+    cout << "\n" << name << "\n";
 
-    cout << "Path: ";
+    if (stats.repair) {
+        cout << "Repair Time: "
+             << stats.timeMs
+             << " ms\n";
 
-    if (result.path.empty()) {
-        cout << "No path";
-    } else {
-        for (int node : result.path) {
-            cout << node << " ";
-        }
+        cout << "Repair Nodes Processed: "
+             << stats.nodesProcessed
+             << "\n";
+
+        cout << "Previous Search State: Reused\n";
+
+        return;
     }
 
-    cout << "\n";
+    cout << "Total time: "
+         << stats.timeMs
+         << " ms\n";
 
-    cout << "Total travel time: "
-         << result.totalTime
-         << "\n";
-
-    cout << "Nodes explored: "
-         << result.nodesExplored
+    cout << "Total visited nodes: "
+         << stats.nodesProcessed
          << "\n";
 }
 
 void printComparison(
-    const RouteResult& aStarResult,
-    const RouteResult& selectiveResult,
-    const RouteResult& hybridResult,
-    bool selectiveSkipped
+    const AlgorithmStats& dijkstraStats,
+    const AlgorithmStats& aStarStats,
+    const AlgorithmStats& selectiveStats,
+    const AlgorithmStats& hybridStats
 ) {
-    printRouteResult(
-        "A*",
-        aStarResult
+    cout << "\n========================================\n";
+    cout << "ROUTING ALGORITHM COMPARISON\n";
+    cout << "========================================\n";
+
+    printAlgorithmStats(
+        "DIJKSTRA",
+        dijkstraStats
+    );
+
+    printAlgorithmStats(
+        "NAIVE A*",
+        aStarStats
+    );
+
+    printAlgorithmStats(
+        "SELECTIVE A*",
+        selectiveStats
+    );
+
+    printAlgorithmStats(
+        "HYBRID LPA*",
+        hybridStats
     );
 
     cout << "\n========================================\n";
-    cout << "SELECTIVE A*\n";
+    cout << "FINAL ROUTE USING HYBRID LPA*\n";
     cout << "========================================\n";
-
-    if (selectiveSkipped) {
-        cout << "Current route not affected. No rerouting needed.\n";
-    }
 
     cout << "Path: ";
 
-    if (selectiveResult.path.empty()) {
+    if (hybridStats.result.path.empty()) {
         cout << "No path";
     } else {
-        for (int node : selectiveResult.path) {
+        for (int node : hybridStats.result.path) {
             cout << node << " ";
         }
     }
 
     cout << "\n";
 
-    cout << "Total travel time: "
-         << selectiveResult.totalTime
+    cout << "Travel time: "
+         << hybridStats.result.totalTime
          << "\n";
 
-    cout << "Nodes explored: "
-         << selectiveResult.nodesExplored
-         << "\n";
-
-    printRouteResult(
-        "HYBRID LPA*",
-        hybridResult
-    );
-    cout << "\nShortest Path: ";
-
-if (hybridResult.path.empty()) {
-    cout << "No path";
-} else {
-    for (int node : hybridResult.path) {
-        cout << node << " ";
-    }
-}
-
-cout << "\n";
-cout << "Shortest Travel Time: "
-     << hybridResult.totalTime
-     << "\n";
-
-    cout << "\n========================================\n";
+    cout << "========================================\n";
 }
 
 }
@@ -113,7 +138,6 @@ Visualizer::Visualizer(
         ),
         title
     ) {
-
     font.openFromFile(
         "C:/Windows/Fonts/arial.ttf"
     );
@@ -350,7 +374,8 @@ pair<int, int> Visualizer::getClickedRoad(
                 );
 
             if (distance < bestDistance) {
-                bestDistance = distance;
+                bestDistance =
+                    distance;
 
                 selectedRoad = {
                     i,
@@ -376,13 +401,30 @@ void Visualizer::calculateInitialRoute(
         return;
     }
 
+    Dijkstra dijkstra;
+
+    AlgorithmStats dijkstraStats =
+        measureAlgorithm(
+            [&]() {
+                return dijkstra.findShortestPath(
+                    graph,
+                    source,
+                    destination
+                );
+            }
+        );
+
     AStar aStar;
 
-    RouteResult aStarResult =
-        aStar.findShortestPath(
-            graph,
-            source,
-            destination
+    AlgorithmStats aStarStats =
+        measureAlgorithm(
+            [&]() {
+                return aStar.findShortestPath(
+                    graph,
+                    source,
+                    destination
+                );
+            }
         );
 
     lpaStar.initialize(
@@ -390,6 +432,9 @@ void Visualizer::calculateInitialRoute(
         source,
         destination
     );
+
+    auto lpaStart =
+        chrono::high_resolution_clock::now();
 
     lpaStar.computeShortestPath(
         graph
@@ -400,40 +445,45 @@ void Visualizer::calculateInitialRoute(
             graph
         );
 
+    auto lpaEnd =
+        chrono::high_resolution_clock::now();
+
+    double lpaTime =
+        chrono::duration<double, milli>(
+            lpaEnd - lpaStart
+        ).count();
+
+    AlgorithmStats hybridStats;
+
+    hybridStats.result =
+        hybridResult;
+
+    hybridStats.timeMs =
+        lpaTime;
+
+    hybridStats.nodesProcessed =
+        hybridResult.nodesExplored;
+
+    AlgorithmStats selectiveStats =
+        aStarStats;
+
+    selectiveStats.nodesProcessed =
+        aStarStats.result.nodesExplored;
+
+    previousLpaNodes =
+        hybridResult.nodesExplored;
+
     lpaInitialized = true;
 
-    printRouteResult(
-        "A*",
-        aStarResult
+    printComparison(
+        dijkstraStats,
+        aStarStats,
+        selectiveStats,
+        hybridStats
     );
 
-    printRouteResult(
-        "SELECTIVE A*",
-        aStarResult
-    );
-
-    printRouteResult(
-        "HYBRID LPA*",
-        hybridResult
-    );
-    cout << "\nShortest Path: ";
-
-if (hybridResult.path.empty()) {
-    cout << "No path";
-} else {
-    for (int node : hybridResult.path) {
-        cout << node << " ";
-    }
-}
-
-cout << "\n";
-cout << "Shortest Travel Time: "
-     << hybridResult.totalTime
-     << "\n";
-
-    cout << "\n========================================\n";
-
-    route = hybridResult;
+    route =
+        hybridResult;
 }
 
 void Visualizer::repairRoute(
@@ -628,21 +678,59 @@ void Visualizer::run(
                         << selectedTo
                         << "\n";
 
+                    Dijkstra dijkstra;
+
+                    AlgorithmStats dijkstraStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return dijkstra.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
+                        );
+
                     AStar aStar;
 
-                    RouteResult aStarResult =
-                        aStar.findShortestPath(
-                            graph,
-                            source,
-                            destination
+                    AlgorithmStats aStarStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return aStar.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
                         );
+
+                    AlgorithmStats selectiveStats;
 
                     if (selectiveAffected) {
                         selectiveRoute =
-                            aStarResult;
+                            aStarStats.result;
+
+                        selectiveStats =
+                            aStarStats;
+
+                        selectiveStats.nodesProcessed =
+                            aStarStats.result.nodesExplored;
+                    } else {
+                        selectiveStats.result =
+                            selectiveRoute;
+
+                        selectiveStats.timeMs =
+                            0.0;
+
+                        selectiveStats.nodesProcessed =
+                            0;
                     }
 
+                    AlgorithmStats hybridStats;
+
                     if (hybridAffected) {
+                        auto start =
+                            chrono::high_resolution_clock::now();
 
                         repairRoute(
                             graph,
@@ -653,20 +741,60 @@ void Visualizer::run(
                             route
                         );
 
+                        auto end =
+                            chrono::high_resolution_clock::now();
+
+                        hybridStats.result =
+                            route;
+
+                        hybridStats.timeMs =
+                            chrono::duration<double, milli>(
+                                end - start
+                            ).count();
+
+                        hybridStats.nodesProcessed =
+                            max(
+                                0,
+                                route.nodesExplored -
+                                previousLpaNodes
+                            );
+
+                        hybridStats.repair =
+                            true;
+
+                        hybridStats.reusedState =
+                            true;
+
+                        previousLpaNodes =
+                            route.nodesExplored;
+
                         cout
                             << "Hybrid LPA*: incremental repair completed.\n";
-
                     } else {
+                        hybridStats.result =
+                            route;
+
+                        hybridStats.timeMs =
+                            0.0;
+
+                        hybridStats.nodesProcessed =
+                            0;
+
+                        hybridStats.repair =
+                            true;
+
+                        hybridStats.reusedState =
+                            true;
 
                         cout
                             << "Hybrid LPA*: current route not affected. No repair needed.\n";
                     }
 
                     printComparison(
-                        aStarResult,
-                        selectiveRoute,
-                        route,
-                        !selectiveAffected
+                        dijkstraStats,
+                        aStarStats,
+                        selectiveStats,
+                        hybridStats
                     );
                 }
 
@@ -686,17 +814,43 @@ void Visualizer::run(
                         << selectedTo
                         << "\n";
 
+                    Dijkstra dijkstra;
+
+                    AlgorithmStats dijkstraStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return dijkstra.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
+                        );
+
                     AStar aStar;
 
-                    RouteResult aStarResult =
-                        aStar.findShortestPath(
-                            graph,
-                            source,
-                            destination
+                    AlgorithmStats aStarStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return aStar.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
                         );
 
                     selectiveRoute =
-                        aStarResult;
+                        aStarStats.result;
+
+                    AlgorithmStats selectiveStats =
+                        aStarStats;
+
+                    selectiveStats.nodesProcessed =
+                        aStarStats.result.nodesExplored;
+
+                    auto start =
+                        chrono::high_resolution_clock::now();
 
                     repairRoute(
                         graph,
@@ -707,14 +861,43 @@ void Visualizer::run(
                         route
                     );
 
+                    auto end =
+                        chrono::high_resolution_clock::now();
+
+                    AlgorithmStats hybridStats;
+
+                    hybridStats.result =
+                        route;
+
+                    hybridStats.timeMs =
+                        chrono::duration<double, milli>(
+                            end - start
+                        ).count();
+
+                    hybridStats.nodesProcessed =
+                        max(
+                            0,
+                            route.nodesExplored -
+                            previousLpaNodes
+                        );
+
+                    hybridStats.repair =
+                        true;
+
+                    hybridStats.reusedState =
+                        true;
+
+                    previousLpaNodes =
+                        route.nodesExplored;
+
                     cout
-                        << "Hybrid LPA*: traffic improvement detected. Incremental repair completed.\n";
+                        << "Hybrid LPA*: incremental repair completed.\n";
 
                     printComparison(
-                        aStarResult,
-                        selectiveRoute,
-                        route,
-                        false
+                        dijkstraStats,
+                        aStarStats,
+                        selectiveStats,
+                        hybridStats
                     );
                 }
 
@@ -748,21 +931,59 @@ void Visualizer::run(
                         << selectedTo
                         << "\n";
 
+                    Dijkstra dijkstra;
+
+                    AlgorithmStats dijkstraStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return dijkstra.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
+                        );
+
                     AStar aStar;
 
-                    RouteResult aStarResult =
-                        aStar.findShortestPath(
-                            graph,
-                            source,
-                            destination
+                    AlgorithmStats aStarStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return aStar.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
                         );
+
+                    AlgorithmStats selectiveStats;
 
                     if (selectiveAffected) {
                         selectiveRoute =
-                            aStarResult;
+                            aStarStats.result;
+
+                        selectiveStats =
+                            aStarStats;
+
+                        selectiveStats.nodesProcessed =
+                            aStarStats.result.nodesExplored;
+                    } else {
+                        selectiveStats.result =
+                            selectiveRoute;
+
+                        selectiveStats.timeMs =
+                            0.0;
+
+                        selectiveStats.nodesProcessed =
+                            0;
                     }
 
+                    AlgorithmStats hybridStats;
+
                     if (hybridAffected) {
+                        auto start =
+                            chrono::high_resolution_clock::now();
 
                         repairRoute(
                             graph,
@@ -773,20 +994,60 @@ void Visualizer::run(
                             route
                         );
 
+                        auto end =
+                            chrono::high_resolution_clock::now();
+
+                        hybridStats.result =
+                            route;
+
+                        hybridStats.timeMs =
+                            chrono::duration<double, milli>(
+                                end - start
+                            ).count();
+
+                        hybridStats.nodesProcessed =
+                            max(
+                                0,
+                                route.nodesExplored -
+                                previousLpaNodes
+                            );
+
+                        hybridStats.repair =
+                            true;
+
+                        hybridStats.reusedState =
+                            true;
+
+                        previousLpaNodes =
+                            route.nodesExplored;
+
                         cout
                             << "Hybrid LPA*: incremental repair completed.\n";
-
                     } else {
+                        hybridStats.result =
+                            route;
+
+                        hybridStats.timeMs =
+                            0.0;
+
+                        hybridStats.nodesProcessed =
+                            0;
+
+                        hybridStats.repair =
+                            true;
+
+                        hybridStats.reusedState =
+                            true;
 
                         cout
                             << "Hybrid LPA*: current route not affected. No repair needed.\n";
                     }
 
                     printComparison(
-                        aStarResult,
-                        selectiveRoute,
-                        route,
-                        !selectiveAffected
+                        dijkstraStats,
+                        aStarStats,
+                        selectiveStats,
+                        hybridStats
                     );
                 }
 
@@ -806,17 +1067,43 @@ void Visualizer::run(
                         << selectedTo
                         << "\n";
 
+                    Dijkstra dijkstra;
+
+                    AlgorithmStats dijkstraStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return dijkstra.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
+                        );
+
                     AStar aStar;
 
-                    RouteResult aStarResult =
-                        aStar.findShortestPath(
-                            graph,
-                            source,
-                            destination
+                    AlgorithmStats aStarStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return aStar.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
                         );
 
                     selectiveRoute =
-                        aStarResult;
+                        aStarStats.result;
+
+                    AlgorithmStats selectiveStats =
+                        aStarStats;
+
+                    selectiveStats.nodesProcessed =
+                        aStarStats.result.nodesExplored;
+
+                    auto start =
+                        chrono::high_resolution_clock::now();
 
                     repairRoute(
                         graph,
@@ -827,14 +1114,43 @@ void Visualizer::run(
                         route
                     );
 
+                    auto end =
+                        chrono::high_resolution_clock::now();
+
+                    AlgorithmStats hybridStats;
+
+                    hybridStats.result =
+                        route;
+
+                    hybridStats.timeMs =
+                        chrono::duration<double, milli>(
+                            end - start
+                        ).count();
+
+                    hybridStats.nodesProcessed =
+                        max(
+                            0,
+                            route.nodesExplored -
+                            previousLpaNodes
+                        );
+
+                    hybridStats.repair =
+                        true;
+
+                    hybridStats.reusedState =
+                        true;
+
+                    previousLpaNodes =
+                        route.nodesExplored;
+
                     cout
-                        << "Hybrid LPA*: road opening detected. Incremental repair completed.\n";
+                        << "Hybrid LPA*: incremental repair completed.\n";
 
                     printComparison(
-                        aStarResult,
-                        selectiveRoute,
-                        route,
-                        false
+                        dijkstraStats,
+                        aStarStats,
+                        selectiveStats,
+                        hybridStats
                     );
                 }
 
@@ -854,17 +1170,43 @@ void Visualizer::run(
                         << selectedTo
                         << "\n";
 
+                    Dijkstra dijkstra;
+
+                    AlgorithmStats dijkstraStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return dijkstra.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
+                        );
+
                     AStar aStar;
 
-                    RouteResult aStarResult =
-                        aStar.findShortestPath(
-                            graph,
-                            source,
-                            destination
+                    AlgorithmStats aStarStats =
+                        measureAlgorithm(
+                            [&]() {
+                                return aStar.findShortestPath(
+                                    graph,
+                                    source,
+                                    destination
+                                );
+                            }
                         );
 
                     selectiveRoute =
-                        aStarResult;
+                        aStarStats.result;
+
+                    AlgorithmStats selectiveStats =
+                        aStarStats;
+
+                    selectiveStats.nodesProcessed =
+                        aStarStats.result.nodesExplored;
+
+                    auto start =
+                        chrono::high_resolution_clock::now();
 
                     repairRoute(
                         graph,
@@ -875,14 +1217,43 @@ void Visualizer::run(
                         route
                     );
 
+                    auto end =
+                        chrono::high_resolution_clock::now();
+
+                    AlgorithmStats hybridStats;
+
+                    hybridStats.result =
+                        route;
+
+                    hybridStats.timeMs =
+                        chrono::duration<double, milli>(
+                            end - start
+                        ).count();
+
+                    hybridStats.nodesProcessed =
+                        max(
+                            0,
+                            route.nodesExplored -
+                            previousLpaNodes
+                        );
+
+                    hybridStats.repair =
+                        true;
+
+                    hybridStats.reusedState =
+                        true;
+
+                    previousLpaNodes =
+                        route.nodesExplored;
+
                     cout
-                        << "Hybrid LPA*: traffic reset detected. Incremental repair completed.\n";
+                        << "Hybrid LPA*: incremental repair completed.\n";
 
                     printComparison(
-                        aStarResult,
-                        selectiveRoute,
-                        route,
-                        false
+                        dijkstraStats,
+                        aStarStats,
+                        selectiveStats,
+                        hybridStats
                     );
                 }
             }
@@ -942,6 +1313,7 @@ void Visualizer::run(
                 ) {
                     roadColor =
                         sf::Color::Red;
+
                 } else if (
                     edge.blocked
                 ) {
@@ -951,12 +1323,14 @@ void Visualizer::run(
                             70,
                             70
                         );
+
                 } else if (
                     selectedFrom == i &&
                     selectedTo == j
                 ) {
                     roadColor =
                         sf::Color::Cyan;
+
                 } else {
                     roadColor =
                         getTrafficColor(
@@ -1022,12 +1396,14 @@ void Visualizer::run(
                 circle.setFillColor(
                     sf::Color::Green
                 );
+
             } else if (
                 i == destination
             ) {
                 circle.setFillColor(
                     sf::Color::Blue
                 );
+
             } else {
                 circle.setFillColor(
                     sf::Color::White
