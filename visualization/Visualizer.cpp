@@ -1,46 +1,186 @@
 #include "Visualizer.h"
-#include "Dijkstra.h"
 #include "AStar.h"
 #include <cmath>
 #include <iostream>
 
-Visualizer::Visualizer(int width, int height, const string& title)
-    : window(sf::VideoMode({static_cast<unsigned int>(width), static_cast<unsigned int>(height)}), title) {
-    if (!font.openFromFile("assets/Arial.ttf")) {
-        window.close();
+using namespace std;
+
+namespace {
+
+void printRouteResult(
+    const string& name,
+    const RouteResult& result
+) {
+    cout << "\n========================================\n";
+    cout << name << "\n";
+    cout << "========================================\n";
+
+    cout << "Path: ";
+
+    if (result.path.empty()) {
+        cout << "No path";
+    } else {
+        for (int node : result.path) {
+            cout << node << " ";
+        }
+    }
+
+    cout << "\n";
+
+    cout << "Total travel time: "
+         << result.totalTime
+         << "\n";
+
+    cout << "Nodes explored: "
+         << result.nodesExplored
+         << "\n";
+}
+
+void printComparison(
+    const RouteResult& aStarResult,
+    const RouteResult& selectiveResult,
+    const RouteResult& hybridResult,
+    bool selectiveSkipped
+) {
+    printRouteResult(
+        "A*",
+        aStarResult
+    );
+
+    cout << "\n========================================\n";
+    cout << "SELECTIVE A*\n";
+    cout << "========================================\n";
+
+    if (selectiveSkipped) {
+        cout << "Current route not affected. No rerouting needed.\n";
+    }
+
+    cout << "Path: ";
+
+    if (selectiveResult.path.empty()) {
+        cout << "No path";
+    } else {
+        for (int node : selectiveResult.path) {
+            cout << node << " ";
+        }
+    }
+
+    cout << "\n";
+
+    cout << "Total travel time: "
+         << selectiveResult.totalTime
+         << "\n";
+
+    cout << "Nodes explored: "
+         << selectiveResult.nodesExplored
+         << "\n";
+
+    printRouteResult(
+        "HYBRID LPA*",
+        hybridResult
+    );
+    cout << "\nShortest Path: ";
+
+if (hybridResult.path.empty()) {
+    cout << "No path";
+} else {
+    for (int node : hybridResult.path) {
+        cout << node << " ";
     }
 }
 
-sf::Color Visualizer::getTrafficColor(const Edge& edge) {
+cout << "\n";
+cout << "Shortest Travel Time: "
+     << hybridResult.totalTime
+     << "\n";
+
+    cout << "\n========================================\n";
+}
+
+}
+
+Visualizer::Visualizer(
+    int width,
+    int height,
+    const string& title
+)
+    : window(
+        sf::VideoMode(
+            sf::Vector2u(
+                width,
+                height
+            )
+        ),
+        title
+    ) {
+
+    font.openFromFile(
+        "C:/Windows/Fonts/arial.ttf"
+    );
+}
+
+sf::Color Visualizer::getTrafficColor(
+    const Edge& edge
+) {
     if (edge.blocked) {
-        return sf::Color(60, 60, 60);
+        return sf::Color(
+            70,
+            70,
+            70
+        );
     }
 
-    int increase = edge.travelTime - edge.baseTravelTime;
+    int increase =
+        edge.travelTime -
+        edge.baseTravelTime;
 
     if (increase <= 0) {
-        return sf::Color(150, 150, 150);
+        return sf::Color(
+            180,
+            180,
+            180
+        );
     }
 
     if (increase <= 5) {
-        return sf::Color::Yellow;
+        return sf::Color(
+            255,
+            255,
+            0
+        );
     }
 
     if (increase <= 10) {
-        return sf::Color(255, 165, 0);
+        return sf::Color(
+            255,
+            165,
+            0
+        );
     }
 
-    return sf::Color(180, 0, 180);
+    return sf::Color(
+        180,
+        0,
+        180
+    );
 }
 
-bool Visualizer::isOpen() {
-    return window.isOpen();
-}
-
-bool Visualizer::isRouteEdge(const vector<int>& path, int from, int to) {
-    for (int i = 0; i + 1 < static_cast<int>(path.size()); i++) {
-        if ((path[i] == from && path[i + 1] == to) ||
-            (path[i] == to && path[i + 1] == from)) {
+bool Visualizer::isRouteEdge(
+    const vector<int>& path,
+    int from,
+    int to
+) {
+    for (
+        int i = 0;
+        i + 1 < static_cast<int>(path.size());
+        i++
+    ) {
+        if (
+            (path[i] == from &&
+             path[i + 1] == to) ||
+            (path[i] == to &&
+             path[i + 1] == from)
+        ) {
             return true;
         }
     }
@@ -53,23 +193,48 @@ bool Visualizer::routeAffected(
     int from,
     int to
 ) {
-    return isRouteEdge(path, from, to);
+    return isRouteEdge(
+        path,
+        from,
+        to
+    );
 }
 
 int Visualizer::getClickedNode(
     const Graph& graph,
     sf::Vector2i mousePosition
 ) {
-    const vector<Node>& nodes = graph.getNodes();
+    const vector<Node>& nodes =
+        graph.getNodes();
 
-    for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
-        float screenX = static_cast<float>(nodes[i].x * 50 + 100);
-        float screenY = static_cast<float>(nodes[i].y * 50 + 100);
+    for (
+        int i = 0;
+        i < static_cast<int>(nodes.size());
+        i++
+    ) {
+        float screenX =
+            static_cast<float>(
+                nodes[i].x * 50 + 100
+            );
 
-        float dx = mousePosition.x - screenX;
-        float dy = mousePosition.y - screenY;
+        float screenY =
+            static_cast<float>(
+                nodes[i].y * 50 + 100
+            );
 
-        if (dx * dx + dy * dy <= 12 * 12) {
+        float dx =
+            mousePosition.x -
+            screenX;
+
+        float dy =
+            mousePosition.y -
+            screenY;
+
+        if (
+            dx * dx +
+            dy * dy <=
+            12 * 12
+        ) {
             return i;
         }
     }
@@ -81,55 +246,116 @@ pair<int, int> Visualizer::getClickedRoad(
     const Graph& graph,
     sf::Vector2i mousePosition
 ) {
-    const vector<Node>& nodes = graph.getNodes();
+    const vector<Node>& nodes =
+        graph.getNodes();
 
-    float mouseX = static_cast<float>(mousePosition.x);
-    float mouseY = static_cast<float>(mousePosition.y);
+    float mouseX =
+        static_cast<float>(
+            mousePosition.x
+        );
 
-    float bestDistance = 12.0f;
-    pair<int, int> selectedRoad = {-1, -1};
+    float mouseY =
+        static_cast<float>(
+            mousePosition.y
+        );
 
-    for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
-        for (const auto& edge : nodes[i].edges) {
-            int j = edge.destination;
+    float bestDistance =
+        12.0f;
+
+    pair<int, int> selectedRoad =
+        {-1, -1};
+
+    for (
+        int i = 0;
+        i < static_cast<int>(nodes.size());
+        i++
+    ) {
+        for (
+            const auto& edge :
+            nodes[i].edges
+        ) {
+            int j =
+                edge.destination;
 
             if (i > j) {
                 continue;
             }
 
-            float x1 = static_cast<float>(nodes[i].x * 50 + 100);
-            float y1 = static_cast<float>(nodes[i].y * 50 + 100);
+            float x1 =
+                static_cast<float>(
+                    nodes[i].x * 50 + 100
+                );
 
-            float x2 = static_cast<float>(nodes[j].x * 50 + 100);
-            float y2 = static_cast<float>(nodes[j].y * 50 + 100);
+            float y1 =
+                static_cast<float>(
+                    nodes[i].y * 50 + 100
+                );
 
-            float dx = x2 - x1;
-            float dy = y2 - y1;
+            float x2 =
+                static_cast<float>(
+                    nodes[j].x * 50 + 100
+                );
 
-            float lengthSquared = dx * dx + dy * dy;
+            float y2 =
+                static_cast<float>(
+                    nodes[j].y * 50 + 100
+                );
+
+            float dx =
+                x2 - x1;
+
+            float dy =
+                y2 - y1;
+
+            float lengthSquared =
+                dx * dx +
+                dy * dy;
 
             if (lengthSquared == 0) {
                 continue;
             }
 
-            float t = ((mouseX - x1) * dx + (mouseY - y1) * dy) / lengthSquared;
+            float t =
+                (
+                    (mouseX - x1) * dx +
+                    (mouseY - y1) * dy
+                ) /
+                lengthSquared;
 
-            t = max(0.0f, min(1.0f, t));
+            t =
+                max(
+                    0.0f,
+                    min(
+                        1.0f,
+                        t
+                    )
+                );
 
-            float closestX = x1 + t * dx;
-            float closestY = y1 + t * dy;
+            float closestX =
+                x1 + t * dx;
 
-            float distanceX = mouseX - closestX;
-            float distanceY = mouseY - closestY;
+            float closestY =
+                y1 + t * dy;
 
-            float distance = sqrt(
-                distanceX * distanceX +
-                distanceY * distanceY
-            );
+            float distanceX =
+                mouseX - closestX;
+
+            float distanceY =
+                mouseY - closestY;
+
+            float distance =
+                sqrt(
+                    distanceX * distanceX +
+                    distanceY * distanceY
+                );
 
             if (distance < bestDistance) {
                 bestDistance = distance;
-                selectedRoad = {i, j};
+
+                selectedRoad = {
+                    i,
+                    j
+                };
             }
         }
     }
@@ -137,25 +363,20 @@ pair<int, int> Visualizer::getClickedRoad(
     return selectedRoad;
 }
 
-void Visualizer::calculateRoute(
+void Visualizer::calculateInitialRoute(
     Graph& graph,
     int source,
     int destination,
     RouteResult& route
 ) {
-    if (source == -1 || destination == -1) {
+    if (
+        source == -1 ||
+        destination == -1
+    ) {
         return;
     }
 
-    Dijkstra dijkstra;
     AStar aStar;
-
-    RouteResult dijkstraResult =
-        dijkstra.findShortestPath(
-            graph,
-            source,
-            destination
-        );
 
     RouteResult aStarResult =
         aStar.findShortestPath(
@@ -164,36 +385,95 @@ void Visualizer::calculateRoute(
             destination
         );
 
-    cout << "\nDijkstra:\n";
-    cout << "Path: ";
+    lpaStar.initialize(
+        graph,
+        source,
+        destination
+    );
 
-    for (int node : dijkstraResult.path) {
+    lpaStar.computeShortestPath(
+        graph
+    );
+
+    RouteResult hybridResult =
+        lpaStar.getCurrentPath(
+            graph
+        );
+
+    lpaInitialized = true;
+
+    printRouteResult(
+        "A*",
+        aStarResult
+    );
+
+    printRouteResult(
+        "SELECTIVE A*",
+        aStarResult
+    );
+
+    printRouteResult(
+        "HYBRID LPA*",
+        hybridResult
+    );
+    cout << "\nShortest Path: ";
+
+if (hybridResult.path.empty()) {
+    cout << "No path";
+} else {
+    for (int node : hybridResult.path) {
         cout << node << " ";
     }
-
-    cout << "\n";
-    cout << "Total travel time: "
-         << dijkstraResult.totalTime << "\n";
-    cout << "Nodes explored: "
-         << dijkstraResult.nodesExplored << "\n";
-
-    cout << "\nA*:\n";
-    cout << "Path: ";
-
-    for (int node : aStarResult.path) {
-        cout << node << " ";
-    }
-
-    cout << "\n";
-    cout << "Total travel time: "
-         << aStarResult.totalTime << "\n";
-    cout << "Nodes explored: "
-         << aStarResult.nodesExplored << "\n\n";
-
-    route = aStarResult;
 }
 
-void Visualizer::run(Graph& graph) {
+cout << "\n";
+cout << "Shortest Travel Time: "
+     << hybridResult.totalTime
+     << "\n";
+
+    cout << "\n========================================\n";
+
+    route = hybridResult;
+}
+
+void Visualizer::repairRoute(
+    Graph& graph,
+    int source,
+    int destination,
+    int from,
+    int to,
+    RouteResult& route
+) {
+    if (!lpaInitialized) {
+        calculateInitialRoute(
+            graph,
+            source,
+            destination,
+            route
+        );
+
+        return;
+    }
+
+    lpaStar.updateEdge(
+        graph,
+        from,
+        to
+    );
+
+    lpaStar.computeShortestPath(
+        graph
+    );
+
+    route =
+        lpaStar.getCurrentPath(
+            graph
+        );
+}
+
+void Visualizer::run(
+    Graph& graph
+) {
     int source = -1;
     int destination = -1;
 
@@ -201,48 +481,83 @@ void Visualizer::run(Graph& graph) {
     int selectedTo = -1;
 
     RouteResult route;
+    RouteResult selectiveRoute;
 
     while (window.isOpen()) {
-        while (const optional event = window.pollEvent()) {
-            if (event->is<sf::Event::Closed>()) {
+
+        while (const optional event =
+            window.pollEvent()) {
+
+            if (
+                event->is<
+                    sf::Event::Closed
+                >()
+            ) {
                 window.close();
             }
 
-            if (const auto* mouseButton =
-                    event->getIf<sf::Event::MouseButtonPressed>()) {
-
-                if (mouseButton->button == sf::Mouse::Button::Left) {
+            if (
+                const auto* mouseButton =
+                    event->getIf<
+                        sf::Event::MouseButtonPressed
+                    >()
+            ) {
+                if (
+                    mouseButton->button ==
+                    sf::Mouse::Button::Left
+                ) {
                     sf::Vector2i mousePosition(
                         mouseButton->position.x,
                         mouseButton->position.y
                     );
 
                     int clickedNode =
-                        getClickedNode(graph, mousePosition);
+                        getClickedNode(
+                            graph,
+                            mousePosition
+                        );
 
                     if (clickedNode != -1) {
-                        if (source == -1) {
-                            source = clickedNode;
 
-                            cout << "Source selected: "
-                                 << source << "\n";
+                        if (source == -1) {
+
+                            source =
+                                clickedNode;
+
+                            cout
+                                << "Source selected: "
+                                << source
+                                << "\n";
+
                         } else if (
                             destination == -1 &&
                             clickedNode != source
                         ) {
-                            destination = clickedNode;
 
-                            cout << "Destination selected: "
-                                 << destination << "\n";
+                            destination =
+                                clickedNode;
 
-                            calculateRoute(
+                            cout
+                                << "Destination selected: "
+                                << destination
+                                << "\n";
+
+                            calculateInitialRoute(
                                 graph,
                                 source,
                                 destination,
                                 route
                             );
+
+                            selectiveRoute =
+                                route;
                         }
-                    } else if (source != -1 && destination != -1) {
+
+                    } else if (
+                        source != -1 &&
+                        destination != -1
+                    ) {
+
                         pair<int, int> road =
                             getClickedRoad(
                                 graph,
@@ -250,196 +565,424 @@ void Visualizer::run(Graph& graph) {
                             );
 
                         if (road.first != -1) {
-                            selectedFrom = road.first;
-                            selectedTo = road.second;
 
-                            cout << "\nSelected road: "
-                                 << selectedFrom
-                                 << " <-> "
-                                 << selectedTo
-                                 << "\n";
+                            selectedFrom =
+                                road.first;
+
+                            selectedTo =
+                                road.second;
+
+                            cout
+                                << "\nSelected road: "
+                                << selectedFrom
+                                << " <-> "
+                                << selectedTo
+                                << "\n";
                         }
                     }
                 }
             }
 
-            if (const auto* key =
-                    event->getIf<sf::Event::KeyPressed>()) {
+            if (
+                const auto* key =
+                    event->getIf<
+                        sf::Event::KeyPressed
+                    >()
+            ) {
+                if (
+                    selectedFrom == -1 ||
+                    selectedTo == -1 ||
+                    source == -1 ||
+                    destination == -1
+                ) {
+                    continue;
+                }
 
-                if (selectedFrom != -1 &&
-                    selectedTo != -1 &&
-                    source != -1 &&
-                    destination != -1) {
-
-                    if (key->code == sf::Keyboard::Key::Up) {
-                        graph.increaseTraffic(
+                if (
+                    key->code ==
+                    sf::Keyboard::Key::Up
+                ) {
+                    bool selectiveAffected =
+                        routeAffected(
+                            selectiveRoute.path,
                             selectedFrom,
                             selectedTo
                         );
 
-                        cout << "\nTraffic increased on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo << "\n";
+                    bool hybridAffected =
+                        routeAffected(
+                            route.path,
+                            selectedFrom,
+                            selectedTo
+                        );
 
-                        if (routeAffected(
-                                route.path,
-                                selectedFrom,
-                                selectedTo
-                            )) {
+                    graph.increaseTraffic(
+                        selectedFrom,
+                        selectedTo
+                    );
 
-                            calculateRoute(
-                                graph,
-                                source,
-                                destination,
-                                route
-                            );
-                        } else {
-                            cout << "Current route is not affected. No rerouting needed.\n";
-                        }
+                    cout
+                        << "\nTraffic increased on road "
+                        << selectedFrom
+                        << " <-> "
+                        << selectedTo
+                        << "\n";
+
+                    AStar aStar;
+
+                    RouteResult aStarResult =
+                        aStar.findShortestPath(
+                            graph,
+                            source,
+                            destination
+                        );
+
+                    if (selectiveAffected) {
+                        selectiveRoute =
+                            aStarResult;
                     }
 
-                    if (key->code == sf::Keyboard::Key::Down) {
-                        graph.decreaseTraffic(
-                            selectedFrom,
-                            selectedTo
-                        );
+                    if (hybridAffected) {
 
-                        cout << "\nTraffic decreased on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo << "\n";
-
-                        calculateRoute(
+                        repairRoute(
                             graph,
                             source,
                             destination,
+                            selectedFrom,
+                            selectedTo,
                             route
                         );
+
+                        cout
+                            << "Hybrid LPA*: incremental repair completed.\n";
+
+                    } else {
+
+                        cout
+                            << "Hybrid LPA*: current route not affected. No repair needed.\n";
                     }
 
-                    if (key->code == sf::Keyboard::Key::R) {
-                        graph.resetTraffic(
+                    printComparison(
+                        aStarResult,
+                        selectiveRoute,
+                        route,
+                        !selectiveAffected
+                    );
+                }
+
+                if (
+                    key->code ==
+                    sf::Keyboard::Key::Down
+                ) {
+                    graph.decreaseTraffic(
+                        selectedFrom,
+                        selectedTo
+                    );
+
+                    cout
+                        << "\nTraffic decreased on road "
+                        << selectedFrom
+                        << " <-> "
+                        << selectedTo
+                        << "\n";
+
+                    AStar aStar;
+
+                    RouteResult aStarResult =
+                        aStar.findShortestPath(
+                            graph,
+                            source,
+                            destination
+                        );
+
+                    selectiveRoute =
+                        aStarResult;
+
+                    repairRoute(
+                        graph,
+                        source,
+                        destination,
+                        selectedFrom,
+                        selectedTo,
+                        route
+                    );
+
+                    cout
+                        << "Hybrid LPA*: traffic improvement detected. Incremental repair completed.\n";
+
+                    printComparison(
+                        aStarResult,
+                        selectiveRoute,
+                        route,
+                        false
+                    );
+                }
+
+                if (
+                    key->code ==
+                    sf::Keyboard::Key::C
+                ) {
+                    bool selectiveAffected =
+                        routeAffected(
+                            selectiveRoute.path,
                             selectedFrom,
                             selectedTo
                         );
 
-                        cout << "\nTraffic reset on road "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo << "\n";
+                    bool hybridAffected =
+                        routeAffected(
+                            route.path,
+                            selectedFrom,
+                            selectedTo
+                        );
 
-                        calculateRoute(
+                    graph.closeRoad(
+                        selectedFrom,
+                        selectedTo
+                    );
+
+                    cout
+                        << "\nRoad closed: "
+                        << selectedFrom
+                        << " <-> "
+                        << selectedTo
+                        << "\n";
+
+                    AStar aStar;
+
+                    RouteResult aStarResult =
+                        aStar.findShortestPath(
+                            graph,
+                            source,
+                            destination
+                        );
+
+                    if (selectiveAffected) {
+                        selectiveRoute =
+                            aStarResult;
+                    }
+
+                    if (hybridAffected) {
+
+                        repairRoute(
                             graph,
                             source,
                             destination,
+                            selectedFrom,
+                            selectedTo,
                             route
                         );
+
+                        cout
+                            << "Hybrid LPA*: incremental repair completed.\n";
+
+                    } else {
+
+                        cout
+                            << "Hybrid LPA*: current route not affected. No repair needed.\n";
                     }
 
-                    if (key->code == sf::Keyboard::Key::C) {
-                        graph.closeRoad(
-                            selectedFrom,
-                            selectedTo
-                        );
+                    printComparison(
+                        aStarResult,
+                        selectiveRoute,
+                        route,
+                        !selectiveAffected
+                    );
+                }
 
-                        cout << "\nRoad closed: "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo << "\n";
+                if (
+                    key->code ==
+                    sf::Keyboard::Key::O
+                ) {
+                    graph.openRoad(
+                        selectedFrom,
+                        selectedTo
+                    );
 
-                        if (routeAffected(
-                                route.path,
-                                selectedFrom,
-                                selectedTo
-                            )) {
+                    cout
+                        << "\nRoad opened: "
+                        << selectedFrom
+                        << " <-> "
+                        << selectedTo
+                        << "\n";
 
-                            calculateRoute(
-                                graph,
-                                source,
-                                destination,
-                                route
-                            );
-                        } else {
-                            cout << "Current route is not affected. No rerouting needed.\n";
-                        }
-                    }
+                    AStar aStar;
 
-                    if (key->code == sf::Keyboard::Key::O) {
-                        graph.openRoad(
-                            selectedFrom,
-                            selectedTo
-                        );
-
-                        cout << "\nRoad opened: "
-                             << selectedFrom
-                             << " <-> "
-                             << selectedTo
-                             << "\n";
-
-                        calculateRoute(
+                    RouteResult aStarResult =
+                        aStar.findShortestPath(
                             graph,
                             source,
-                            destination,
-                            route
+                            destination
                         );
-                    }
+
+                    selectiveRoute =
+                        aStarResult;
+
+                    repairRoute(
+                        graph,
+                        source,
+                        destination,
+                        selectedFrom,
+                        selectedTo,
+                        route
+                    );
+
+                    cout
+                        << "Hybrid LPA*: road opening detected. Incremental repair completed.\n";
+
+                    printComparison(
+                        aStarResult,
+                        selectiveRoute,
+                        route,
+                        false
+                    );
+                }
+
+                if (
+                    key->code ==
+                    sf::Keyboard::Key::R
+                ) {
+                    graph.resetTraffic(
+                        selectedFrom,
+                        selectedTo
+                    );
+
+                    cout
+                        << "\nTraffic reset on road "
+                        << selectedFrom
+                        << " <-> "
+                        << selectedTo
+                        << "\n";
+
+                    AStar aStar;
+
+                    RouteResult aStarResult =
+                        aStar.findShortestPath(
+                            graph,
+                            source,
+                            destination
+                        );
+
+                    selectiveRoute =
+                        aStarResult;
+
+                    repairRoute(
+                        graph,
+                        source,
+                        destination,
+                        selectedFrom,
+                        selectedTo,
+                        route
+                    );
+
+                    cout
+                        << "Hybrid LPA*: traffic reset detected. Incremental repair completed.\n";
+
+                    printComparison(
+                        aStarResult,
+                        selectiveRoute,
+                        route,
+                        false
+                    );
                 }
             }
         }
 
-        window.clear();
+        window.clear(
+            sf::Color::Black
+        );
 
-        const vector<Node>& nodes = graph.getNodes();
+        const vector<Node>& nodes =
+            graph.getNodes();
 
-        for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
-            const auto& node = nodes[i];
+        for (
+            int i = 0;
+            i < static_cast<int>(nodes.size());
+            i++
+        ) {
+            float x1 =
+                static_cast<float>(
+                    nodes[i].x * 50 + 100
+                );
 
-            for (const auto& edge : node.edges) {
-                int destinationNodeId = edge.destination;
+            float y1 =
+                static_cast<float>(
+                    nodes[i].y * 50 + 100
+                );
 
-                if (i > destinationNodeId) {
+            for (
+                const auto& edge :
+                nodes[i].edges
+            ) {
+                int j =
+                    edge.destination;
+
+                if (i > j) {
                     continue;
                 }
 
-                const Node& destinationNode =
-                    nodes[destinationNodeId];
+                float x2 =
+                    static_cast<float>(
+                        nodes[j].x * 50 + 100
+                    );
+
+                float y2 =
+                    static_cast<float>(
+                        nodes[j].y * 50 + 100
+                    );
+
+                sf::Color roadColor;
+
+                if (
+                    isRouteEdge(
+                        route.path,
+                        i,
+                        j
+                    )
+                ) {
+                    roadColor =
+                        sf::Color::Red;
+                } else if (
+                    edge.blocked
+                ) {
+                    roadColor =
+                        sf::Color(
+                            70,
+                            70,
+                            70
+                        );
+                } else if (
+                    selectedFrom == i &&
+                    selectedTo == j
+                ) {
+                    roadColor =
+                        sf::Color::Cyan;
+                } else {
+                    roadColor =
+                        getTrafficColor(
+                            edge
+                        );
+                }
 
                 sf::Vertex line[2];
 
-                line[0].position = sf::Vector2f(
-                    static_cast<float>(node.x * 50 + 100),
-                    static_cast<float>(node.y * 50 + 100)
-                );
+                line[0].position =
+                    sf::Vector2f(
+                        x1,
+                        y1
+                    );
 
-                line[1].position = sf::Vector2f(
-                    static_cast<float>(destinationNode.x * 50 + 100),
-                    static_cast<float>(destinationNode.y * 50 + 100)
-                );
+                line[0].color =
+                    roadColor;
 
-                if (i == selectedFrom &&
-                    destinationNodeId == selectedTo) {
+                line[1].position =
+                    sf::Vector2f(
+                        x2,
+                        y2
+                    );
 
-                    line[0].color = sf::Color::Cyan;
-                    line[1].color = sf::Color::Cyan;
-                } else if (edge.blocked) {
-                    line[0].color = sf::Color(60, 60, 60);
-                    line[1].color = sf::Color(60, 60, 60);
-                } else if (isRouteEdge(
-                               route.path,
-                               i,
-                               destinationNodeId
-                           )) {
-
-                    line[0].color = sf::Color::Red;
-                    line[1].color = sf::Color::Red;
-                } else {
-                    sf::Color trafficColor =
-                        getTrafficColor(edge);
-
-                    line[0].color = trafficColor;
-                    line[1].color = trafficColor;
-                }
+                line[1].color =
+                    roadColor;
 
                 window.draw(
                     line,
@@ -449,40 +992,82 @@ void Visualizer::run(Graph& graph) {
             }
         }
 
-        for (int i = 0; i < static_cast<int>(nodes.size()); i++) {
-            const auto& node = nodes[i];
+        for (
+            int i = 0;
+            i < static_cast<int>(nodes.size());
+            i++
+        ) {
+            float x =
+                static_cast<float>(
+                    nodes[i].x * 50 + 100
+                );
 
-            sf::CircleShape circle(6);
+            float y =
+                static_cast<float>(
+                    nodes[i].y * 50 + 100
+                );
 
-            circle.setPosition({
-                static_cast<float>(node.x * 50 + 94),
-                static_cast<float>(node.y * 50 + 94)
-            });
+            sf::CircleShape circle(
+                5.0f
+            );
+
+            circle.setPosition(
+                sf::Vector2f(
+                    x - 5,
+                    y - 5
+                )
+            );
 
             if (i == source) {
-                circle.setFillColor(sf::Color::Green);
-            } else if (i == destination) {
-                circle.setFillColor(sf::Color::Blue);
+                circle.setFillColor(
+                    sf::Color::Green
+                );
+            } else if (
+                i == destination
+            ) {
+                circle.setFillColor(
+                    sf::Color::Blue
+                );
             } else {
-                circle.setFillColor(sf::Color::White);
+                circle.setFillColor(
+                    sf::Color::White
+                );
             }
 
-            window.draw(circle);
+            window.draw(
+                circle
+            );
 
-            sf::Text text(font);
+            if (
+                font.getInfo().family != ""
+            ) {
+                sf::Text text(
+                    font,
+                    to_string(i),
+                    12
+                );
 
-            text.setString(to_string(i));
-            text.setCharacterSize(12);
-            text.setFillColor(sf::Color::White);
+                text.setFillColor(
+                    sf::Color::White
+                );
 
-            text.setPosition({
-                static_cast<float>(node.x * 50 + 102),
-                static_cast<float>(node.y * 50 + 90)
-            });
+                text.setPosition(
+                    sf::Vector2f(
+                        x + 7,
+                        y - 8
+                    )
+                );
 
-            window.draw(text);
+                window.draw(
+                    text
+                );
+            }
         }
 
         window.display();
     }
+}
+
+bool Visualizer::isOpen() {
+    return window.isOpen();
 }

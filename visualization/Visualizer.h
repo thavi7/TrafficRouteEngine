@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "Graph.h"
 #include "RouteResult.h"
+#include "LPAStar.h"
 
 using namespace std;
 
@@ -12,21 +13,57 @@ private:
     sf::RenderWindow window;
     sf::Font font;
 
-    bool isRouteEdge(const vector<int>& path, int from, int to);
-    bool routeAffected(const vector<int>& path, int from, int to);
-    int getClickedNode(const Graph& graph, sf::Vector2i mousePosition);
-    pair<int, int> getClickedRoad(const Graph& graph, sf::Vector2i mousePosition);
-    sf::Color getTrafficColor(const Edge& edge);
+    LPAStar lpaStar;
+    bool lpaInitialized = false;
 
-    void calculateRoute(
+    bool isRouteEdge(
+        const vector<int>& path,
+        int from,
+        int to
+    );
+
+    bool routeAffected(
+        const vector<int>& path,
+        int from,
+        int to
+    );
+
+    int getClickedNode(
+        const Graph& graph,
+        sf::Vector2i mousePosition
+    );
+
+    pair<int, int> getClickedRoad(
+        const Graph& graph,
+        sf::Vector2i mousePosition
+    );
+
+    sf::Color getTrafficColor(
+        const Edge& edge
+    );
+
+    void calculateInitialRoute(
         Graph& graph,
         int source,
         int destination,
         RouteResult& route
     );
 
+    void repairRoute(
+        Graph& graph,
+        int source,
+        int destination,
+        int from,
+        int to,
+        RouteResult& route
+    );
+
 public:
-    Visualizer(int width, int height, const string& title);
+    Visualizer(
+        int width,
+        int height,
+        const string& title
+    );
 
     void run(Graph& graph);
 
