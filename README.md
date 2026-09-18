@@ -1,17 +1,17 @@
-<!-- 
-cmake --build build
-.\build\TrafficRouteEngine.exe
+  <!-- 
+  cmake --build build
+  .\build\TrafficRouteEngine.exe
 
-change cmake
+  change cmake
 
-cmake -S . -B build
-test
+  cmake -S . -B build
+  test
 
-cmake --build build --target SelectiveAstar
-.\build\SelectiveAstar.exe
+  cmake --build build --target SelectiveAstar
+  .\build\SelectiveAstar.exe
 
- cmake --build build --target LPABenchmark
- .\build\LPABenchmark.exe -->
+  cmake --build build --target LPABenchmark
+  .\build\LPABenchmark.exe -->
 # 🚦 Traffic Route Engine
 
 A C++ traffic-aware routing engine that simulates real-time congestion, road closures, and dynamic rerouting on a weighted graph — with a live SFML visualization and benchmarked performance comparisons between **Dijkstra** and **A\***.

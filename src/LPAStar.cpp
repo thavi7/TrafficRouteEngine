@@ -1,9 +1,12 @@
 #include "LPAStar.h"
+#include <iostream>
 
 pair<int, int> LPAStar::calculateKey(
     const Graph& graph,
     int node
 ) const {
+    const_cast<LPAStar*>(this)->calculateKeyCalls++;
+
     int minimum = min(g[node], rhs[node]);
 
     if (minimum == INF) {
@@ -16,20 +19,17 @@ pair<int, int> LPAStar::calculateKey(
     const vector<Node>& nodes =
         graph.getNodes();
 
-    int dx =
-        abs(
-            nodes[node].x -
-            nodes[destination].x
-        );
+    int dx = abs(
+        nodes[node].x -
+        nodes[destination].x
+    );
 
-    int dy =
-        abs(
-            nodes[node].y -
-            nodes[destination].y
-        );
+    int dy = abs(
+        nodes[node].y -
+        nodes[destination].y
+    );
 
-    int heuristic =
-        dx + dy;
+    int heuristic = dx + dy;
 
     return {
         minimum + heuristic,
@@ -37,29 +37,13 @@ pair<int, int> LPAStar::calculateKey(
     };
 }
 
-vector<int> LPAStar::getPredecessors(
-    const Graph& graph,
-    int node
-) const {
-    const vector<Node>& nodes =
-        graph.getNodes();
-
-    vector<int> predecessors;
-
-    for (int i = 0;
-         i < static_cast<int>(nodes.size());
-         i++) {
-
-        for (const auto& edge :
-             nodes[i].edges) {
-
-            if (edge.destination == node) {
-                predecessors.push_back(i);
-            }
-        }
-    }
-
-    return predecessors;
+void LPAStar::resetCounters() {
+    updateVertexCalls = 0;
+    calculateKeyCalls = 0;
+    predecessorChecks = 0;
+    queuePushes = 0;
+    queuePops = 0;
+    staleEntries = 0;
 }
 
 void LPAStar::initialize(
@@ -79,7 +63,32 @@ void LPAStar::initialize(
     rhs.assign(n, INF);
     parent.assign(n, -1);
 
+    predecessorEdges.assign(n, {});
+
+    const vector<Node>& nodes =
+        graph.getNodes();
+
+    for (int from = 0; from < n; from++) {
+        for (int edgeIndex = 0;
+             edgeIndex < static_cast<int>(nodes[from].edges.size());
+             edgeIndex++) {
+
+            int to =
+                nodes[from].edges[edgeIndex].destination;
+
+            predecessorEdges[to].push_back({
+                from,
+                edgeIndex
+            });
+        }
+    }
+
+    queuedKey1.assign(n, INF);
+    queuedKey2.assign(n, INF);
+
     nodesExplored = 0;
+
+    resetCounters();
 
     while (!open.empty()) {
         open.pop();
@@ -98,53 +107,60 @@ void LPAStar::initialize(
         key.first,
         key.second
     });
+
+    queuePushes++;
+
+    queuedKey1[source] = key.first;
+    queuedKey2[source] = key.second;
 }
 
 void LPAStar::updateVertex(
     const Graph& graph,
     int node
 ) {
+    updateVertexCalls++;
+
     if (node != source) {
-        rhs[node] = INF;
-        parent[node] = -1;
+        int newRhs = INF;
+        int newParent = -1;
 
         const vector<Node>& nodes =
             graph.getNodes();
 
-        vector<int> predecessors =
-            getPredecessors(
-                graph,
-                node
-            );
+        for (const auto& predecessor :
+             predecessorEdges[node]) {
 
-        for (int predecessor :
-             predecessors) {
+            predecessorChecks++;
 
-            for (const auto& edge :
-                 nodes[predecessor].edges) {
+            int predecessorNode =
+                predecessor.first;
 
-                if (edge.destination != node) {
-                    continue;
-                }
+            int edgeIndex =
+                predecessor.second;
 
-                if (edge.blocked) {
-                    continue;
-                }
+            const Edge& edge =
+                nodes[predecessorNode].edges[edgeIndex];
 
-                if (g[predecessor] == INF) {
-                    continue;
-                }
+            if (edge.blocked) {
+                continue;
+            }
 
-                int candidate =
-                    g[predecessor] +
-                    edge.travelTime;
+            if (g[predecessorNode] == INF) {
+                continue;
+            }
 
-                if (candidate < rhs[node]) {
-                    rhs[node] = candidate;
-                    parent[node] = predecessor;
-                }
+            int candidate =
+                g[predecessorNode] +
+                edge.travelTime;
+
+            if (candidate < newRhs) {
+                newRhs = candidate;
+                newParent = predecessorNode;
             }
         }
+
+        rhs[node] = newRhs;
+        parent[node] = newParent;
     }
 
     if (g[node] != rhs[node]) {
@@ -154,11 +170,23 @@ void LPAStar::updateVertex(
                 node
             );
 
-        open.push({
-            node,
-            key.first,
-            key.second
-        });
+        if (queuedKey1[node] != key.first ||
+            queuedKey2[node] != key.second) {
+
+            open.push({
+                node,
+                key.first,
+                key.second
+            });
+
+            queuePushes++;
+
+            queuedKey1[node] = key.first;
+            queuedKey2[node] = key.second;
+        }
+    } else {
+        queuedKey1[node] = INF;
+        queuedKey2[node] = INF;
     }
 }
 
@@ -169,34 +197,13 @@ void LPAStar::updateEdge(
 ) {
     updateVertex(
         graph,
-        to
+        from
     );
 
     updateVertex(
         graph,
-        from
+        to
     );
-
-    const vector<Node>& nodes =
-        graph.getNodes();
-
-    for (const auto& edge :
-         nodes[from].edges) {
-
-        updateVertex(
-            graph,
-            edge.destination
-        );
-    }
-
-    for (const auto& edge :
-         nodes[to].edges) {
-
-        updateVertex(
-            graph,
-            edge.destination
-        );
-    }
 }
 
 void LPAStar::computeShortestPath(
@@ -224,6 +231,18 @@ void LPAStar::computeShortestPath(
         }
 
         open.pop();
+        queuePops++;
+
+        if (queuedKey1[current.node] != current.key1 ||
+            queuedKey2[current.node] != current.key2) {
+
+            staleEntries++;
+
+            continue;
+        }
+
+        queuedKey1[current.node] = INF;
+        queuedKey2[current.node] = INF;
 
         pair<int, int> currentKey =
             calculateKey(
@@ -233,6 +252,8 @@ void LPAStar::computeShortestPath(
 
         if (current.key1 != currentKey.first ||
             current.key2 != currentKey.second) {
+
+            staleEntries++;
 
             continue;
         }
@@ -251,18 +272,6 @@ void LPAStar::computeShortestPath(
             g[current.node] =
                 rhs[current.node];
 
-            const vector<Node>& nodes =
-                graph.getNodes();
-
-            for (const auto& edge :
-                 nodes[current.node].edges) {
-
-                updateVertex(
-                    graph,
-                    edge.destination
-                );
-            }
-
         } else {
 
             g[current.node] =
@@ -272,18 +281,18 @@ void LPAStar::computeShortestPath(
                 graph,
                 current.node
             );
+        }
 
-            const vector<Node>& nodes =
-                graph.getNodes();
+        const vector<Node>& nodes =
+            graph.getNodes();
 
-            for (const auto& edge :
-                 nodes[current.node].edges) {
+        for (const auto& edge :
+             nodes[current.node].edges) {
 
-                updateVertex(
-                    graph,
-                    edge.destination
-                );
-            }
+            updateVertex(
+                graph,
+                edge.destination
+            );
         }
     }
 }
@@ -362,4 +371,16 @@ RouteResult LPAStar::getCurrentPath(
 
 int LPAStar::getNodesExplored() const {
     return nodesExplored;
+}
+
+void LPAStar::printCounters() const {
+    cout << "\n========== LPA* INTERNAL COUNTERS ==========\n";
+    cout << "updateVertex calls: " << updateVertexCalls << "\n";
+    cout << "calculateKey calls: " << calculateKeyCalls << "\n";
+    cout << "predecessor checks: " << predecessorChecks << "\n";
+    cout << "queue pushes: " << queuePushes << "\n";
+    cout << "queue pops: " << queuePops << "\n";
+    cout << "stale entries: " << staleEntries << "\n";
+    cout << "nodes explored: " << nodesExplored << "\n";
+    cout << "============================================\n";
 }

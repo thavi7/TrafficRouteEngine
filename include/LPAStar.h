@@ -19,9 +19,21 @@ private:
     vector<int> rhs;
     vector<int> parent;
 
+    vector<vector<pair<int, int>>> predecessorEdges;
+
+    vector<int> queuedKey1;
+    vector<int> queuedKey2;
+
     int source = -1;
     int destination = -1;
     int nodesExplored = 0;
+
+    long long updateVertexCalls = 0;
+    long long calculateKeyCalls = 0;
+    long long predecessorChecks = 0;
+    long long queuePushes = 0;
+    long long queuePops = 0;
+    long long staleEntries = 0;
 
     struct QueueNode {
         int node;
@@ -48,11 +60,6 @@ private:
     > open;
 
     pair<int, int> calculateKey(
-        const Graph& graph,
-        int node
-    ) const;
-
-    vector<int> getPredecessors(
         const Graph& graph,
         int node
     ) const;
@@ -90,4 +97,8 @@ public:
     ) const;
 
     int getNodesExplored() const;
+
+    void resetCounters();
+
+    void printCounters() const;
 };
