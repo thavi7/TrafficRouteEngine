@@ -1,0 +1,506 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "_deps/sfml-build/lib/libsfml-network-s-d.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"sfml_add_library",
+			"install",
+			"target_link_libraries",
+			"target_compile_options",
+			"set_target_warnings",
+			"target_compile_definitions",
+			"include_directories",
+			"target_include_directories",
+			"target_compile_features"
+		],
+		"files" : 
+		[
+			"out/build/Custom configure preset/_deps/sfml-src/cmake/Macros.cmake",
+			"out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/CMakeLists.txt",
+			"out/build/Custom configure preset/_deps/sfml-src/cmake/CompilerWarnings.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 234,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 47,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 49,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 43,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 68,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 286,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 85,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 86,
+				"parent" : 6
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 12
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 274,
+				"parent" : 1
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 79,
+				"parent" : 1
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "sfml-system::@8cb1db2982443611e568"
+		}
+	],
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++17 -fvisibility=hidden -fno-keep-inline-dllexport"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wshadow"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wnon-virtual-dtor"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wcast-align"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wunused"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Woverloaded-virtual"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wconversion"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wsign-conversion"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wdouble-promotion"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wformat=2"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wimplicit-fallthrough"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wsuggest-override"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wnull-dereference"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wold-style-cast"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wmisleading-indentation"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wduplicated-cond"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wlogical-op"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wduplicated-branches"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "SFML_STATIC"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "_CRT_SECURE_NO_WARNINGS"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "_WINSOCK_DEPRECATED_NO_WARNINGS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 13,
+					"path" : "C:/PROJECT/TrafficRouteEngine/include"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "C:/PROJECT/TrafficRouteEngine/src"
+				},
+				{
+					"backtrace" : 13,
+					"path" : "C:/PROJECT/TrafficRouteEngine/visualization"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/include"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					15
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				1,
+				3,
+				5,
+				7,
+				9,
+				13,
+				15,
+				17,
+				19,
+				21
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "sfml-system::@8cb1db2982443611e568"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "SFML"
+	},
+	"id" : "sfml-network::@d7f79968b2699e7782cb",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/PROJECT/TrafficRouteEngine/out/install/Custom configure preset"
+		}
+	},
+	"interfaceCompileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "sfml-system::@8cb1db2982443611e568"
+		}
+	],
+	"interfaceLinkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "sfml-system::@8cb1db2982443611e568"
+		},
+		{
+			"backtrace" : 5,
+			"fragment" : "ws2_32"
+		}
+	],
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "sfml-system::@8cb1db2982443611e568"
+		},
+		{
+			"backtrace" : 5,
+			"fragment" : "ws2_32"
+		}
+	],
+	"name" : "sfml-network",
+	"nameOnDisk" : "libsfml-network-s-d.a",
+	"paths" : 
+	{
+		"build" : "_deps/sfml-build/src/SFML/Network",
+		"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/Export.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/Ftp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/Ftp.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/Http.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/Http.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/IpAddress.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/IpAddress.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/Packet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/Packet.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/Socket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/Socket.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/SocketImpl.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/SocketHandle.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/SocketSelector.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/SocketSelector.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/TcpListener.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/TcpListener.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/TcpSocket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/TcpSocket.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/UdpSocket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/include/SFML/Network/UdpSocket.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network/Win32/SocketImpl.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

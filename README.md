@@ -147,16 +147,6 @@ Selective rerouting was tested on a 10,000-node graph with 1,000 traffic updates
 
 ## 🚧 Remaining Work
 
-### Benchmark CSV
-- Export benchmark results to CSV
-- Store graph size, runtime, algorithm runs, skipped updates
-
-### Python + Matplotlib
-- Runtime comparison (naive vs selective)
-- A\* executions vs graph size
-- Time reduction vs graph size
-- LPA\* repair performance visualization
-
 ### GoogleTest Suite
 - Graph tests
 - Dijkstra tests

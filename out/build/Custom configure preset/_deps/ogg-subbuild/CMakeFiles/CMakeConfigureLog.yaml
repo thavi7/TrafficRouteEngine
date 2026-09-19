@@ -1,0 +1,11 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+...

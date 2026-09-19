@@ -1,0 +1,21 @@
+# ninja log v7
+4	269	8115036866901931	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	2c57a4a7f57ae886
+4	269	8115036866901931	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	2c57a4a7f57ae886
+270	3673	8115036900940990	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	2289cff841ac03dc
+270	3673	8115036900940990	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	2289cff841ac03dc
+3674	3991	8115036901071219	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	6aafe9adf0a053ad
+3674	3991	8115036901071219	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	6aafe9adf0a053ad
+3992	4290	8115036907117591	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	cdfb8ee75b0a42f8
+3992	4290	8115036907117591	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	cdfb8ee75b0a42f8
+4290	4489	8115036909093392	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	22c5a89b2707c33f
+4290	4489	8115036909093392	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	22c5a89b2707c33f
+4490	4714	8115036911335618	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	8a98c987ee17b719
+4490	4714	8115036911335618	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	8a98c987ee17b719
+4716	4929	8115036913478383	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	4c6ba237819fe03
+4716	4929	8115036913478383	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	4c6ba237819fe03
+4930	5110	8115036915327277	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	7043108e6ee03d7
+4930	5110	8115036915327277	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	7043108e6ee03d7
+5111	5339	8115036917634219	CMakeFiles/ogg-populate-complete	328a3298f074d2b9
+5111	5339	8115036917634219	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	328a3298f074d2b9
+5111	5339	8115036917634219	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/CMakeFiles/ogg-populate-complete	328a3298f074d2b9
+5111	5339	8115036917634219	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	328a3298f074d2b9

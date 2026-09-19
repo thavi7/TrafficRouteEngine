@@ -1,0 +1,627 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Git::Git::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Git__Git-Debug-ab26ce58a038710665dd.json",
+					"name" : "Git::Git",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "OpenGL::GL::@5730451e331e3690ae65",
+					"jsonFile" : "target-OpenGL__GL-Debug-6f353229362da335fc1c.json",
+					"name" : "OpenGL::GL",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "OpenGL::GLU::@5730451e331e3690ae65",
+					"jsonFile" : "target-OpenGL__GLU-Debug-889460d057c0a3360bfd.json",
+					"name" : "OpenGL::GLU",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Threads::Threads::@8cb1db2982443611e568",
+					"jsonFile" : "target-Threads__Threads-Debug-98ba0d9b064c0f9fe169.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "Threads::Threads::@a153e5727587c53fce98",
+					"jsonFile" : "target-Threads__Threads-Debug-f16e1a0c2f2a891f02ec.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "freetype-interface::@d06f9f5ffc3cc0b4bd77",
+					"jsonFile" : "target-freetype-interface-Debug-98e12e09831cf56c8d11.json",
+					"name" : "freetype-interface",
+					"projectIndex" : 2
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f040eec181a89de70dbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"build" : "_deps/sfml-build",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build-Debug-54304c89a8baaae96200.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src"
+				},
+				{
+					"build" : "_deps/sfml-build/src/SFML",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML-Debug-95c42c58142048e64429.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML"
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						3
+					],
+					"build" : "_deps/sfml-build/src/SFML/System",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.System-Debug-5d29f6183ac42ac5903c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/System",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "_deps/sfml-build/src/SFML/Main",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Main-Debug-8a7549f4d6c41f461c7a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Main",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						1,
+						2
+					],
+					"build" : "_deps/sfml-build/src/SFML/Window",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Window-Debug-904e99b76e29c7278ab1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Window",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "_deps/sfml-build/src/SFML/Network",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Network-Debug-94a9fa64aa7edbfa90a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "_deps/sfml-build/src/SFML/Graphics",
+					"childIndexes" : 
+					[
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Graphics-Debug-efbc5c9d1eabde93372f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Graphics",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						5
+					],
+					"build" : "_deps/freetype-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.freetype-build-Debug-2eb6f422a50d2e7f75c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 2,
+					"source" : "out/build/Custom configure preset/_deps/freetype-src",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						4
+					],
+					"build" : "_deps/sfml-build/src/SFML/Audio",
+					"childIndexes" : 
+					[
+						10,
+						11,
+						15
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Audio-Debug-3bece267660cd90b36a4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Audio",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "_deps/ogg-build",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.ogg-build-Debug-f8ff950a2851129498db.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 3,
+					"source" : "out/build/Custom configure preset/_deps/ogg-src",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "_deps/flac-build",
+					"childIndexes" : 
+					[
+						12,
+						14
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.flac-build-Debug-1f367985cc61f1b9f4c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 4,
+					"source" : "out/build/Custom configure preset/_deps/flac-src"
+				},
+				{
+					"build" : "_deps/flac-build/src",
+					"childIndexes" : 
+					[
+						13
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.flac-build.src-Debug-716d82b0bb02aac2e0ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 4,
+					"source" : "out/build/Custom configure preset/_deps/flac-src/src"
+				},
+				{
+					"build" : "_deps/flac-build/src/libFLAC",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.flac-build.src.libFLAC-Debug-0661e161fefcd0f02295.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 4,
+					"source" : "out/build/Custom configure preset/_deps/flac-src/src/libFLAC",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "_deps/flac-build/microbench",
+					"jsonFile" : "directory-_deps.flac-build.microbench-Debug-e6e375474dd5df11559a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 4,
+					"source" : "out/build/Custom configure preset/_deps/flac-src/microbench",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "_deps/vorbis-build",
+					"childIndexes" : 
+					[
+						16
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.vorbis-build-Debug-bd99b111e8e7b1476e62.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 5,
+					"source" : "out/build/Custom configure preset/_deps/vorbis-src"
+				},
+				{
+					"build" : "_deps/vorbis-build/lib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.vorbis-build.lib-Debug-4e7c37153d86a76c06d5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 15,
+					"projectIndex" : 5,
+					"source" : "out/build/Custom configure preset/_deps/vorbis-src/lib",
+					"targetIndexes" : 
+					[
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TrafficRouteEngine",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						9
+					],
+					"name" : "SFML",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						5
+					],
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "freetype",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "libogg",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11,
+						12,
+						13,
+						14
+					],
+					"name" : "FLAC",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						0,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						15,
+						16
+					],
+					"name" : "vorbis",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 13,
+					"id" : "FLAC::@d572677c3819035d9b3d",
+					"jsonFile" : "target-FLAC-Debug-c2c4b36d889c6d72a407.json",
+					"name" : "FLAC",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HybridBenchmark::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HybridBenchmark-Debug-b34bf47529802dda38b7.json",
+					"name" : "HybridBenchmark",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LPABenchmark::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LPABenchmark-Debug-1dc917c3408607359450.json",
+					"name" : "LPABenchmark",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SelectiveAstar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SelectiveAstar-Debug-1bac003b9c53ad730ce5.json",
+					"name" : "SelectiveAstar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TrafficRouteEngine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TrafficRouteEngine-Debug-8fe8050ab88d01091b0b.json",
+					"name" : "TrafficRouteEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "benchmark_residual::@3956ab943ce8cc4f6f98",
+					"jsonFile" : "target-benchmark_residual-Debug-22f3a308cf5c0731724a.json",
+					"name" : "benchmark_residual",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "freetype::@d06f9f5ffc3cc0b4bd77",
+					"jsonFile" : "target-freetype-Debug-5e30077d8e7320f93c97.json",
+					"name" : "freetype",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "ogg::@4e5ed7d02827854e35f8",
+					"jsonFile" : "target-ogg-Debug-d6d79bc7c08463b81c42.json",
+					"name" : "ogg",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "sfml-audio::@a153e5727587c53fce98",
+					"jsonFile" : "target-sfml-audio-Debug-d50b9506c0712429398b.json",
+					"name" : "sfml-audio",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "sfml-graphics::@98af38147d5fa7e70f61",
+					"jsonFile" : "target-sfml-graphics-Debug-dd6c0b61070bef58295d.json",
+					"name" : "sfml-graphics",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "sfml-main::@81ec5539f1398dd625f6",
+					"jsonFile" : "target-sfml-main-Debug-0958e2a62cc08f1cb30d.json",
+					"name" : "sfml-main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sfml-network::@d7f79968b2699e7782cb",
+					"jsonFile" : "target-sfml-network-Debug-362b02b2cd4770d00b76.json",
+					"name" : "sfml-network",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sfml-system::@8cb1db2982443611e568",
+					"jsonFile" : "target-sfml-system-Debug-70851d27050e1c5abe30.json",
+					"name" : "sfml-system",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "sfml-window::@5730451e331e3690ae65",
+					"jsonFile" : "target-sfml-window-Debug-ac2bebf671a033c0af51.json",
+					"name" : "sfml-window",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "vorbis::@692b0ee2b61df6760d20",
+					"jsonFile" : "target-vorbis-Debug-ed1879e6602c1497e20a.json",
+					"name" : "vorbis",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "vorbisenc::@692b0ee2b61df6760d20",
+					"jsonFile" : "target-vorbisenc-Debug-6671436c301cd64968a5.json",
+					"name" : "vorbisenc",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "vorbisfile::@692b0ee2b61df6760d20",
+					"jsonFile" : "target-vorbisfile-Debug-36bd2372e9a6b493ad6f.json",
+					"name" : "vorbisfile",
+					"projectIndex" : 5
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset",
+		"source" : "C:/PROJECT/TrafficRouteEngine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

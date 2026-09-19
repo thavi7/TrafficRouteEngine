@@ -1,0 +1,21 @@
+# ninja log v7
+2	123	8115036142289087	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	9c1390517f22a39b
+2	123	8115036142289087	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	9c1390517f22a39b
+124	37790	8115036518971316	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d4dd3edecdc64ab0
+124	37790	8115036518971316	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d4dd3edecdc64ab0
+37793	38007	8115036519071359	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	b071b6e92e9d7ea1
+37793	38007	8115036519071359	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	b071b6e92e9d7ea1
+38007	38117	8115036522232163	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	775909e4bf28e87b
+38007	38117	8115036522232163	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	775909e4bf28e87b
+38117	38238	8115036523453576	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	47edf62fc46f23f3
+38117	38238	8115036523453576	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	47edf62fc46f23f3
+38238	38358	8115036524647249	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	97c29dbd947a55fd
+38238	38358	8115036524647249	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	97c29dbd947a55fd
+38358	38462	8115036525663162	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	3467d49a5edd47a4
+38358	38462	8115036525663162	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	3467d49a5edd47a4
+38462	38572	8115036526777568	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	b03816ed3a59c472
+38462	38572	8115036526777568	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	b03816ed3a59c472
+38573	38717	8115036528237895	CMakeFiles/sfml-populate-complete	31cdbc0c9f538b02
+38573	38717	8115036528237895	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	31cdbc0c9f538b02
+38573	38717	8115036528237895	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	31cdbc0c9f538b02
+38573	38717	8115036528237895	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	31cdbc0c9f538b02

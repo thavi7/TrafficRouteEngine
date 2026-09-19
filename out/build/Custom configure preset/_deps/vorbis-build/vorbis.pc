@@ -1,0 +1,15 @@
+# libvorbis pkg-config source file
+
+prefix=C:/PROJECT/TrafficRouteEngine/out/install/Custom configure preset
+exec_prefix=C:/PROJECT/TrafficRouteEngine/out/install/Custom configure preset/bin
+libdir=C:/PROJECT/TrafficRouteEngine/out/install/Custom configure preset/lib
+includedir=C:/PROJECT/TrafficRouteEngine/out/install/Custom configure preset/include
+
+Name: vorbis
+Description: vorbis is the primary Ogg Vorbis library
+Version: 1.3.7
+Requires.private: ogg
+Conflicts:
+Libs: -L${libdir} -lvorbis 
+Libs.private: 
+Cflags: -I${includedir}

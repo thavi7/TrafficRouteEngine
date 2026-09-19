@@ -3,6 +3,7 @@
 #include <random>
 #include <chrono>
 #include <iomanip>
+#include <fstream>
 #include "GraphGenerator.h"
 #include "AStar.h"
 #include "LPAStar.h"
@@ -68,6 +69,54 @@ vector<pair<int, int>> generateUpdates(
     }
 
     return updates;
+}
+
+void writeCSVHeader() {
+    ifstream checkFile("benchmark_results.csv");
+
+    if (checkFile.good()) {
+        checkFile.close();
+        return;
+    }
+
+    checkFile.close();
+
+    ofstream file("benchmark_results.csv");
+
+    file << "graph_size,rows,cols,algorithm,runtime_us,nodes_explored,reroutes,skipped_updates,time_reduction_percent\n";
+
+    file.close();
+}
+
+void writeCSVRow(
+    int graphSize,
+    int rows,
+    int cols,
+    const string& algorithm,
+    double runtime,
+    double nodesExplored,
+    double reroutes,
+    double skippedUpdates,
+    double timeReduction
+) {
+    ofstream file(
+        "benchmark_results.csv",
+        ios::app
+    );
+
+    file << graphSize << ","
+         << rows << ","
+         << cols << ","
+         << algorithm << ","
+         << fixed << setprecision(2)
+         << runtime << ","
+         << nodesExplored << ","
+         << reroutes << ","
+         << skippedUpdates << ","
+         << timeReduction
+         << "\n";
+
+    file.close();
 }
 
 void runBenchmark(
@@ -376,6 +425,31 @@ void runBenchmark(
             hybridNodes
         ) / successfulTrials;
 
+    double avgSelectiveRuns =
+        static_cast<double>(
+            selectiveRuns
+        ) / successfulTrials;
+
+    double avgSelectiveSkipped =
+        static_cast<double>(
+            selectiveSkipped
+        ) / successfulTrials;
+
+    double avgLPARuns =
+        static_cast<double>(
+            lpaUpdates
+        ) / successfulTrials;
+
+    double avgHybridRuns =
+        static_cast<double>(
+            hybridUpdates
+        ) / successfulTrials;
+
+    double avgHybridSkipped =
+        static_cast<double>(
+            hybridSkipped
+        ) / successfulTrials;
+
     double selectiveReduction =
         100.0 *
         (avgNaiveTime - avgSelectiveTime) /
@@ -395,6 +469,54 @@ void runBenchmark(
         100.0 *
         (avgSelectiveTime - avgHybridTime) /
         avgSelectiveTime;
+
+    writeCSVRow(
+        rows * cols,
+        rows,
+        cols,
+        "Naive A*",
+        avgNaiveTime,
+        avgNaiveNodes,
+        numberOfUpdates,
+        0,
+        0
+    );
+
+    writeCSVRow(
+        rows * cols,
+        rows,
+        cols,
+        "Selective A*",
+        avgSelectiveTime,
+        avgSelectiveNodes,
+        avgSelectiveRuns,
+        avgSelectiveSkipped,
+        selectiveReduction
+    );
+
+    writeCSVRow(
+        rows * cols,
+        rows,
+        cols,
+        "LPA*",
+        avgLPATime,
+        avgLPANodes,
+        avgLPARuns,
+        0,
+        lpaReduction
+    );
+
+    writeCSVRow(
+        rows * cols,
+        rows,
+        cols,
+        "Hybrid",
+        avgHybridTime,
+        avgHybridNodes,
+        avgHybridRuns,
+        avgHybridSkipped,
+        hybridReduction
+    );
 
     cout << "\n========================================\n";
     cout << "GRAPH: "
@@ -440,15 +562,11 @@ void runBenchmark(
     cout << "========================================\n";
 
     cout << "A* runs: "
-         << static_cast<double>(
-                selectiveRuns
-            ) / successfulTrials
+         << avgSelectiveRuns
          << "\n";
 
     cout << "Skipped updates: "
-         << static_cast<double>(
-                selectiveSkipped
-            ) / successfulTrials
+         << avgSelectiveSkipped
          << "\n";
 
     cout << "Average A* nodes: "
@@ -468,9 +586,7 @@ void runBenchmark(
     cout << "========================================\n";
 
     cout << "LPA* updates: "
-         << static_cast<double>(
-                lpaUpdates
-            ) / successfulTrials
+         << avgLPARuns
          << "\n";
 
     cout << "Average update nodes: "
@@ -490,15 +606,11 @@ void runBenchmark(
     cout << "========================================\n";
 
     cout << "LPA* updates: "
-         << static_cast<double>(
-                hybridUpdates
-            ) / successfulTrials
+         << avgHybridRuns
          << "\n";
 
     cout << "Skipped updates: "
-         << static_cast<double>(
-                hybridSkipped
-            ) / successfulTrials
+         << avgHybridSkipped
          << "\n";
 
     cout << "Average update nodes: "
@@ -563,6 +675,8 @@ void runBenchmark(
 }
 
 int main() {
+    writeCSVHeader();
+
     runBenchmark(10, 10, 1000, 5);
     runBenchmark(32, 32, 1000, 5);
     runBenchmark(50, 50, 1000, 5);

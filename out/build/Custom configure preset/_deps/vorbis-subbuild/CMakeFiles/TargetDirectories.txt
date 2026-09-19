@@ -1,0 +1,3 @@
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate.dir
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/CMakeFiles/edit_cache.dir
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/CMakeFiles/rebuild_cache.dir

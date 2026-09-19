@@ -1,0 +1,14 @@
+# Target labels
+ sfml-populate
+# Source files and their labels
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/CMakeFiles/sfml-populate
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/CMakeFiles/sfml-populate.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test.rule
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update.rule

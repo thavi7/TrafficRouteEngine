@@ -1,0 +1,21 @@
+# ninja log v7
+5	215	8115037414260342	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	77139f3b6afe10d4
+5	215	8115037414260342	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	77139f3b6afe10d4
+235	6510	8115037477163179	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	b75d7684714a6140
+235	6510	8115037477163179	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	b75d7684714a6140
+6528	6752	8115037477477636	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	d754393d79f8c2e8
+6528	6752	8115037477477636	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	d754393d79f8c2e8
+6753	6906	8115037481180059	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	a7bcd283cfd2e77a
+6753	6906	8115037481180059	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	a7bcd283cfd2e77a
+6907	7024	8115037482363683	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	8fb47b7f974c196
+6907	7024	8115037482363683	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	8fb47b7f974c196
+7025	7137	8115037483493067	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	f12aaaa14f71d516
+7025	7137	8115037483493067	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	f12aaaa14f71d516
+7138	7251	8115037484612185	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	f5a4e33e071d41d7
+7138	7251	8115037484612185	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	f5a4e33e071d41d7
+7252	7367	8115037485791760	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	6b5d4e0736232870
+7252	7367	8115037485791760	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	6b5d4e0736232870
+7368	7537	8115037487486780	CMakeFiles/vorbis-populate-complete	721efddabbc0572f
+7368	7537	8115037487486780	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	721efddabbc0572f
+7368	7537	8115037487486780	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate-complete	721efddabbc0572f
+7368	7537	8115037487486780	C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	721efddabbc0572f

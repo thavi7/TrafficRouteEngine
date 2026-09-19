@@ -1,0 +1,19 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/flac-build/src",
+		"source" : "out/build/Custom configure preset/_deps/flac-src/src"
+	}
+}

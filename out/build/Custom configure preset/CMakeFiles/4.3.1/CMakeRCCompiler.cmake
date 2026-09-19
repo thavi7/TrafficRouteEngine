@@ -1,0 +1,6 @@
+set(CMAKE_RC_COMPILER "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/windres.exe")
+set(CMAKE_RC_COMPILER_ARG1 "")
+set(CMAKE_RC_COMPILER_LOADED 1)
+set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)
+set(CMAKE_RC_OUTPUT_EXTENSION .obj)
+set(CMAKE_RC_COMPILER_ENV_VAR "RC")

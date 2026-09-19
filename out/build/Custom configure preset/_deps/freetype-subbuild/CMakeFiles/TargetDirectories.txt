@@ -1,0 +1,3 @@
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/freetype-subbuild/CMakeFiles/freetype-populate.dir
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/freetype-subbuild/CMakeFiles/edit_cache.dir
+C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/freetype-subbuild/CMakeFiles/rebuild_cache.dir

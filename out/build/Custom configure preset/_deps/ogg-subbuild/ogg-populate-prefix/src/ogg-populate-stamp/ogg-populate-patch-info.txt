@@ -1,0 +1,6 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The update step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+command=C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/cmake.exe;-DOGG_DIR=C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-src;-P;C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/tools/ogg/PatchOgg.cmake
+work_dir=C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/ogg-src
