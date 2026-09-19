@@ -50,7 +50,7 @@
 				"_deps/sfml-build/lib/libvorbisd.a"
 			],
 			"targetId" : "vorbis::@692b0ee2b61df6760d20",
-			"targetIndex" : 14,
+			"targetIndex" : 12,
 			"type" : "target"
 		},
 		{
@@ -62,7 +62,7 @@
 				"_deps/sfml-build/lib/libvorbisencd.a"
 			],
 			"targetId" : "vorbisenc::@692b0ee2b61df6760d20",
-			"targetIndex" : 15,
+			"targetIndex" : 13,
 			"type" : "target"
 		},
 		{
@@ -74,7 +74,7 @@
 				"_deps/sfml-build/lib/libvorbisfiled.a"
 			],
 			"targetId" : "vorbisfile::@692b0ee2b61df6760d20",
-			"targetIndex" : 16,
+			"targetIndex" : 14,
 			"type" : "target"
 		},
 		{
@@ -86,15 +86,15 @@
 			[
 				{
 					"id" : "vorbis::@692b0ee2b61df6760d20",
-					"index" : 14
+					"index" : 12
 				},
 				{
 					"id" : "vorbisenc::@692b0ee2b61df6760d20",
-					"index" : 15
+					"index" : 13
 				},
 				{
 					"id" : "vorbisfile::@692b0ee2b61df6760d20",
-					"index" : 16
+					"index" : 14
 				}
 			],
 			"paths" : 

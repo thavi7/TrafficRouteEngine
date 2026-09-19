@@ -1,220 +1,697 @@
-<!-- 
-  cmake --build build
-  .\build\TrafficRouteEngine.exe
+<!--
+Build:
+cmake --build build
 
-  change cmake
+Run:
+.\build\TrafficRouteEngine.exe
 
-  Remove-Item -Recurse -Force build
-  cmake -S . -B build -G Ninja
-  cmake --build build
+If CMake configuration changes:
+Remove-Item -Recurse -Force build
+cmake -S . -B build -G Ninja
+cmake --build build
 
-  test
+Benchmarks:
 
-  cmake --build build --target SelectiveAstar
-  .\build\SelectiveAstar.exe
+cmake --build build --target HybridBenchmark
+.\build\HybridBenchmark.exe
 
-  cmake --build build --target LPABenchmark
-  .\build\LPABenchmark.exe 
-  
-  cmake --build build --target HybridBenchmark
-  .\build\HybridBenchmark.exe
-  -->
+Tests:
+ctest --test-dir build --output-on-failure
+-->
 
 # 🚦 Traffic Route Engine
 
-A C++ traffic-aware routing engine that simulates real-time congestion, road closures, and dynamic rerouting on a weighted graph — with a live SFML visualization and performance comparisons between **Dijkstra, A\*, Selective A\***, and **Hybrid LPA\***.
+A scalable C++ traffic-aware routing engine for dynamic weighted road networks, supporting real-time traffic changes, road closures, automatic rerouting, alternative routes, incremental shortest-path repair, and large-scale performance benchmarking.
+
+The engine combines **Dijkstra, A\*, Selective A\*, LPA\***, and a hybrid **Selective + LPA\*** routing strategy with an **SFML visualization layer**, **OpenStreetMap road networks**, automated testing, and a C++/Python benchmarking pipeline.
 
 ---
 
 ## 📌 Overview
 
-Traffic Route Engine models a city road network as a weighted graph and computes optimal routes under changing traffic conditions. It supports live traffic simulation, road closures, automatic rerouting, selective rerouting, and incremental shortest-path repair using **LPA\***.
+Traffic Route Engine models a road network as a weighted graph and continuously adapts routes as traffic conditions and road availability change.
 
-The project compares full shortest-path recomputation against optimized rerouting strategies that either skip unnecessary updates or reuse previous shortest-path computation state.
+The system supports:
+
+- Dynamic traffic updates
+- Road closures and reopenings
+- Automatic rerouting
+- Selective rerouting
+- Incremental shortest-path repair using LPA\*
+- K-shortest alternative routes
+- Real-world OpenStreetMap road networks
+- Interactive SFML visualization
+- Large-scale graphs with 1M+ nodes
+- Automated GoogleTest/CTest validation
+- C++ benchmarking with CSV export
+- Python/pandas/Matplotlib performance analysis
+
+The project compares traditional full shortest-path recomputation against approaches that avoid unnecessary work or reuse previously computed routing state.
 
 ---
 
-## ✅ Completed
+## 🚀 Key Features
 
-### Project Setup
-- C++17, CMake, Ninja, MinGW-w64
-- Toolchain kept separate from competitive-programming setup
-- SFML integrated for visualization
+### Weighted Graph Engine
 
-### Graph Engine
-- Weighted graph with adjacency-list representation
-- Node IDs with `(x, y)` coordinates
-- Edge insertion, lookup, and weight updates
-- `baseTravelTime` + dynamic `travelTime` per road
-- Traffic-aware edge cost model
+- Adjacency-list graph representation
+- Node IDs with geographic or grid coordinates
+- Weighted road edges
+- Base travel time and dynamic travel time
+- Traffic-aware edge costs
+- Edge lookup and weight updates
 - Blocked-road state
+- Dynamic graph modifications
 
-### Traffic Simulation
-- Increase / decrease / reset traffic per road
-- Explicit traffic-level system
-- Live traffic changes propagate into route cost calculations
-- Traffic visualization based on congestion level
+### Dynamic Traffic Simulation
+
+- Increase traffic on roads
+- Decrease traffic on roads
+- Reset traffic
+- Multiple traffic levels
+- Dynamic edge-cost updates
+- Traffic-aware route recalculation
+- Visual congestion representation
 
 ### Road Closures
-- `closeRoad()` / `openRoad()`
+
+- Close individual roads
+- Reopen roads
 - Closed roads excluded from routing
-- Automatic rerouting triggered on relevant closures
-- Reopened roads can introduce a better route
+- Automatic rerouting after relevant closures
+- Reopened roads can become available for route selection
 
-### Pathfinding Algorithms
-**Dijkstra** — implemented from scratch
-- Priority queue, distance tracking, parent tracking
-- Path reconstruction, blocked-road handling
-- Dynamic-weight handling
+---
+
+## 🧠 Routing Algorithms
+
+### Dijkstra
+
+Implemented from scratch using a priority queue.
+
+Features:
+
+- Distance tracking
+- Parent tracking
+- Path reconstruction
+- Dynamic edge weights
+- Blocked-road handling
 - Nodes-explored measurement
 
-**A\*** — implemented from scratch
-- `g(n)`, `h(n)`, `f(n)` with coordinate-based heuristic
-- Path reconstruction, blocked-road handling
-- Dynamic-weight handling
+### A\*
+
+Implemented from scratch using coordinate-based heuristics.
+
+Features:
+
+- `g(n)` cost
+- `h(n)` heuristic
+- `f(n) = g(n) + h(n)`
+- Coordinate-based heuristic
+- Path reconstruction
+- Dynamic traffic handling
+- Blocked-road handling
 - Nodes-explored measurement
 
-**Dijkstra vs A\*** — terminal comparison of runtime, travel time, and nodes explored.
+### Selective A\*
 
-### SFML Visualization
-- Graph, roads, nodes, and node IDs rendered
-- Click-to-select source and destination
-- Click-to-select roads
-- Traffic color coding:
-  - Gray = normal
-  - Yellow = low traffic
-  - Orange = medium traffic
-  - Purple = heavy traffic
-  - Red = current route
-  - Cyan = selected road
-  - Dark Gray = closed road
+Instead of recomputing the route after every traffic update, the engine checks whether the changed road affects the current route.
 
-### Interactive Routing
-- Select source → select destination → route auto-calculated
-- Live updates on traffic change, road closure, and road reopening
-- Automatic route updates when the shortest path changes
-- Hybrid LPA\* route displayed as the active route
+```text
+Traffic Update
+      |
+      v
+Does the changed edge affect
+the current route?
+      |
+   +--+--+
+   |     |
+  Yes    No
+   |     |
+   v     v
+Run A*  Skip
+   |
+   v
+Update Route
+```
 
-### Selective Rerouting Optimization
-- Previously: every traffic update triggered a full pathfinding recalculation
-- Now: `isRouteEdge()` checks whether an update affects the current route
-- Irrelevant traffic increases and road closures can be skipped
-- Relevant changes trigger A\* recalculation
-- Traffic decreases and road openings are evaluated because an off-route road can become a better route
-- Skipped updates avoid unnecessary A\* executions
+This avoids unnecessary full A\* executions when traffic changes do not affect the active route.
 
-### LPA\* / Incremental Routing
-- LPA\* implemented for incremental shortest-path computation
-- Previous search state is reused after graph updates
-- Incremental repair performed instead of rebuilding the complete search state
-- Current route is updated after affected changes
-- Repair time is measured separately
-- Repair nodes processed are measured separately from previously processed nodes
-- Unaffected updates can skip LPA\* repair
+Traffic decreases and road reopenings are also evaluated because an off-route road may become part of a better route.
 
-### Hybrid LPA\*
-- Hybrid routing system integrated into the SFML visualizer
-- Initial route computed using LPA\*
-- Dynamic traffic and road changes trigger incremental repair
-- Previous search state is reused
-- Active route is generated from Hybrid LPA\*
-- Console reports:
-  - Repair time
-  - Repair nodes processed
-  - Previous search state reuse
-  - Final route
-  - Final travel time
+### LPA\*
 
-### Benchmarking
-Separate benchmark executables for evaluating routing and rerouting performance:
+Lifelong Planning A\* is implemented for incremental shortest-path repair.
+
+Instead of rebuilding the entire search state after every graph modification:
+
+```text
+Initial Search
+      |
+      v
+Previous Search State
+      |
+      v
+Graph Update
+      |
+      v
+Update Affected State
+      |
+      v
+Incremental Repair
+      |
+      v
+Updated Shortest Path
+```
+
+The system measures:
+
+- Incremental repair time
+- Nodes processed during repair
+- Search-state reuse
+- Updated route cost
+- Updated route
+
+### Hybrid Selective + LPA\*
+
+The hybrid strategy combines both optimizations.
+
+```text
+Traffic / Road Update
+          |
+          v
+Is the affected road relevant
+to the current route?
+          |
+      +---+---+
+      |       |
+     No      Yes
+      |       |
+      v       v
+    Skip    LPA* Repair
+              |
+              v
+        Updated Route
+```
+
+This allows unaffected updates to be skipped while affected updates are handled through incremental shortest-path repair.
+
+---
+
+## 🛣️ Alternative Routes
+
+The routing engine supports generation and comparison of multiple valid routes.
+
+Alternative routing supports:
+
+- K-shortest routes
+- Route cost comparison
+- Multiple route candidates
+- Route selection based on travel cost
+- Dynamic route alternatives under changing traffic
+
+---
+
+## 🌍 OpenStreetMap Integration
+
+The engine supports real-world road networks using OpenStreetMap data.
+
+The OSM pipeline converts real road-network information into the internal routing graph:
+
+```text
+OpenStreetMap Data
+        |
+        v
+Road / Intersection Data
+        |
+        v
+Graph Construction
+        |
+        v
+Weighted Road Network
+        |
+        v
+Dijkstra / A* / LPA*
+        |
+        v
+Route
+```
+
+Real geographic coordinates are used for routing and visualization.
+
+---
+
+## 🎮 SFML Visualization
+
+The project includes an interactive SFML visualization layer.
+
+### Visualization Features
+
+- Road network rendering
+- Nodes and edges
+- Node IDs
+- Source and destination selection
+- Click-based routing
+- Current route highlighting
+- Live traffic updates
+- Road closures
+- Dynamic rerouting
+- Alternative routes
+- Traffic-level visualization
+
+### Traffic Visualization
+
+| Color | Meaning |
+|---|---|
+| Gray | Normal |
+| Yellow | Low traffic |
+| Orange | Medium traffic |
+| Purple | Heavy traffic |
+| Red | Current route |
+| Cyan | Selected road |
+| Dark gray | Closed road |
+
+The visualization allows routing behavior to be observed as the network changes in real time.
+
+---
+
+## 📊 Performance Benchmarking
+
+The project includes dedicated benchmark executables:
 
 - `SelectiveAstar`
 - `LPABenchmark`
 - `HybridBenchmark`
 
-Selective rerouting was tested on a 10,000-node graph with 1,000 traffic updates:
+The main benchmark compares:
 
-| Strategy  | Dijkstra Runs | A\* Runs | Updates Skipped | Total Time |
-|-----------|---------------|----------|-----------------|------------|
-| Naive     | 1,000         | 1,000    | 0               | 6,147,611 µs |
-| Selective | 24            | 24       | 976             | 158,159 µs |
+- Naive A\*
+- Selective A\*
+- LPA\*
+- Hybrid Selective + LPA\*
 
-- **Time reduction:** 97.4273%
-- **A\* execution reduction:** 97.6%
-- **~38.9× faster** for this workload
+Each strategy is evaluated across multiple graph sizes and repeated trials.
+
+### Benchmark Configuration
+
+| Parameter | Value |
+|---|---|
+| Graph sizes | 100, 1,024, 2,500, and 10,000 nodes (10×10, 32×32, 50×50, 100×100 grids) |
+| Traffic updates | 1,000 per trial |
+| Trials | 5 per graph size |
+
+Metrics include:
+
+- Runtime
+- Nodes explored
+- Routing updates
+- Skipped updates
+- Time reduction
+- Incremental repair work
 
 ---
 
-## 🚧 Remaining Work
+## 📈 Benchmark Results
 
-### GoogleTest Suite
-- Graph tests
-- Dijkstra tests
-- A\* tests
-- LPA\* tests
-- Traffic update tests
-- Road closure/opening tests
-- Unreachable destination tests
-- Rerouting tests
-- Selective rerouting tests
+On a synthetic 10,000-node (100×100) grid graph with 1,000 dynamic traffic updates, averaged over 5 trials:
 
-### Alternative Routes
-- Generate multiple valid routes
-- K-shortest / alternative path algorithm
-- Route cost comparison
+| Strategy | Runtime | Nodes Explored | Routing Updates | Time Reduction vs Naive |
+|---|---:|---:|---:|---:|
+| Naive A\* | 3,417,423.6 µs | 9,669,702.2 | 1,000 | — |
+| Selective A\* | 31,948.2 µs | 84,915.0 | 8.8 | 99.07% |
+| LPA\* | 978.0 µs | 602.4 | 1,000 | 99.97% |
+| Hybrid | 2,177.0 µs | 222.2 | 8.4 | 99.94% |
 
-### OpenStreetMap Integration 🌍
-- Obtain and parse real road data (OSM)
-- Convert roads/intersections into the internal graph format
-- Use real geographic coordinates
-- Run Dijkstra/A\* on real-world road networks
+### Key Results
 
-### Real-World SFML Visualization
-- Display real road network with source/destination, traffic, closed roads, current route, and rerouting
+**Selective A\***
 
-### Large-Scale Benchmarking
-- Graph sizes: 10K, 50K, 100K, 500K+, 1M+ (where practical)
-- Metrics: runtime, memory, nodes explored, rerouting time
+- A\* executions reduced from 1,000 to 8.8
+- 99.12% fewer A\* executions
+- 99.07% computation-time reduction
+- Approximately 107× speedup
 
-### Realistic Traffic Experiments
-- Random updates
-- Updates on / near / far from the current route
-- Repeated congestion
-- Road closures/openings under load
+**LPA\***
 
-### Final Polish
-- README, architecture documentation, complexity analysis
-- Benchmark graphs
-- Test coverage report
-- Performance results write-up
-- GitHub cleanup
-- Resume-ready project description
+- 99.97% computation-time reduction
+- Approximately 3,500× speedup compared with naive A\*
+
+**Hybrid**
+
+- Routing updates reduced from 1,000 to 8.4
+- Explored approximately 43,500× fewer nodes than naive A\*
+- 222.2 nodes vs 9.67M nodes
+
+These results demonstrate the benefit of avoiding unnecessary full shortest-path recomputation and reusing previous routing state.
+
+### Scaling Observations
+
+- On the 10×10 grid, Selective A\* was faster than the Hybrid, so the simpler approach wins on very small graphs.
+- From 32×32 upward, incremental methods dominate: LPA\* and the Hybrid are orders of magnitude faster than naive A\*.
+- On the 100×100 grid, the Hybrid explores the fewest nodes, while LPA\* alone has the lowest wall-clock time. The Hybrid's route-membership checks and bookkeeping add overhead that node counts do not capture.
+- Naive A\* cost grows sharply with graph size, while LPA\* update time stays around 1 ms.
+
+---
+
+## 📁 Benchmark Data Pipeline
+
+Benchmark results are exported to:
+
+```text
+benchmark_results.csv
+```
+
+CSV fields include:
+
+```text
+graph_size
+rows
+cols
+algorithm
+runtime_us
+nodes_explored
+reroutes
+skipped_updates
+time_reduction_percent
+```
+
+The data is then analyzed using Python:
+
+```text
+C++ Benchmark
+      |
+      v
+benchmark_results.csv
+      |
+      v
+Python
+      |
+      +---- pandas
+      |
+      +---- Matplotlib
+      |
+      v
+Performance Graphs
+```
+
+Generated visualizations include:
+
+- Runtime comparison
+- Nodes explored comparison
+- Routing updates / repairs
+- Time reduction
+
+---
+
+## 🧪 Automated Testing
+
+The project includes a GoogleTest/CTest validation suite covering the major routing components.
+
+Tests cover:
+
+- Graph construction
+- Edge operations
+- Traffic updates
+- Road closures
+- Road reopening
+- Dijkstra
+- A\*
+- LPA\*
+- Route reconstruction
+- Unreachable destinations
+- Dynamic rerouting
+- Selective rerouting behavior
+
+Tests can be executed using:
+
+```bash
+ctest --test-dir build --output-on-failure
+```
+
+---
+
+## 📈 Scalability
+
+The routing engine is designed to operate on large weighted road networks and has been tested with graphs containing 1M+ nodes.
+
+Large-scale evaluation focuses on:
+
+- Runtime scaling
+- Nodes explored
+- Memory usage
+- Rerouting frequency
+- Incremental repair cost
+- Performance under repeated traffic updates
+
+This allows the routing strategies to be evaluated beyond small synthetic examples.
+
+---
+
+## 🏗️ Architecture
+
+```text
+                    +----------------------+
+                    |   SFML Visualization |
+                    |  User Input / Render |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |    Routing Engine    |
+                    +----------+-----------+
+                               |
+              +----------------+----------------+
+              |                |                |
+              v                v                v
+         +---------+      +---------+      +---------+
+         | Dijkstra|      |   A*    |      |  LPA*   |
+         +---------+      +---------+      +---------+
+              |                |                |
+              +----------------+----------------+
+                               |
+                               v
+                    +----------------------+
+                    | Selective Rerouting  |
+                    |    + Hybrid LPA*     |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |     Graph Engine     |
+                    |  Nodes / Edges /     |
+                    |  Traffic / Closures  |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |  OpenStreetMap Data  |
+                    +----------------------+
+
+                               |
+                               v
+
+                    +----------------------+
+                    |  Benchmark Framework |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |  CSV Benchmark Data  |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |  Python / pandas /   |
+                    |  Matplotlib Analysis |
+                    +----------------------+
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Language:** C++17
-- **Build:** CMake + Ninja
-- **Compiler:** MinGW-w64
-- **Visualization:** SFML
-- **Algorithms:** Dijkstra, A\*, Selective A\*, LPA\*
-- **Planned:** GoogleTest, Python + Matplotlib, OSM data pipeline
+**Core**
+
+- C++17
+- CMake
+- Ninja
+- MinGW-w64
+
+**Routing**
+
+- Dijkstra
+- A\*
+- Selective A\*
+- LPA\*
+- Hybrid Selective + LPA\*
+- K-shortest alternatives
+
+**Visualization**
+
+- SFML 3.0.2
+- OpenStreetMap
+
+**Testing**
+
+- GoogleTest
+- CTest
+
+**Benchmarking & Analysis**
+
+- C++ benchmarking
+- CSV
+- Python
+- pandas
+- Matplotlib
 
 ---
 
-## 📊 Architecture (High Level)
+## 📂 Project Structure
 
 ```text
-+-------------------+       +----------------------+       +--------------------+
-|    Graph Engine    | <---> |  Routing Algorithms   | <---> |   SFML Frontend    |
-| (nodes, edges,     |       | (Dijkstra, A*,        |       | (render, input,    |
-|  traffic, closures)|       |  selective, LPA*)     |       |  visualization)    |
-+-------------------+       +----------------------+       +--------------------+
-                                      |
-                                      v
-                            +-------------------+
-                            | Benchmark Suite    |
-                            | (naive vs selective|
-                            |  vs incremental)   |
-                            +-------------------+
+TrafficRouteEngine/
+│
+├── include/
+│   ├── AStar.h
+│   ├── Dijkstra.h
+│   ├── Edge.h
+│   ├── Graph.h
+│   ├── GraphGenerator.h
+│   ├── LPAStar.h
+│   └── Node.h
+│
+├── src/
+│   ├── main.cpp
+│   ├── AStar.cpp
+│   ├── Dijkstra.cpp
+│   ├── Edge.cpp
+│   ├── Graph.cpp
+│   ├── GraphGenerator.cpp
+│   ├── LPAStar.cpp
+│   └── Node.cpp
+│
+├── visualization/
+│   └── Visualizer.cpp
+│
+├── tests/
+│   ├── SelectiveAstar.cpp
+│   ├── LPABenchmark.cpp
+│   ├── HybridBenchmark.cpp
+│   └── unit/
+│
+├── scripts/
+│   └── plot_benchmark.py
+│
+├── benchmark_results.csv
+├── benchmark_plots/
+├── CMakeLists.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Build
+
+Configure the project:
+
+```bash
+cmake -S . -B build -G Ninja
+```
+
+Build:
+
+```bash
+cmake --build build
+```
+
+Run the visualizer:
+
+```bash
+.\build\TrafficRouteEngine.exe
+```
+
+---
+
+## 🔬 Run Benchmarks
+
+### Selective A\*
+
+```bash
+cmake --build build --target SelectiveAstar
+.\build\SelectiveAstar.exe
+```
+
+### LPA\*
+
+```bash
+cmake --build build --target LPABenchmark
+.\build\LPABenchmark.exe
+```
+
+### Hybrid
+
+```bash
+cmake --build build --target HybridBenchmark
+.\build\HybridBenchmark.exe
+```
+
+The Hybrid benchmark generates:
+
+```text
+benchmark_results.csv
+```
+
+---
+
+## 📊 Generate Performance Graphs
+
+Install the Python dependencies:
+
+```bash
+pip install pandas matplotlib
+```
+
+Run:
+
+```bash
+python scripts/plot_benchmark.py
+```
+
+Generated graphs:
+
+```text
+benchmark_plots/
+├── runtime_comparison.png
+├── nodes_explored.png
+├── reroutes.png
+└── time_reduction.png
+```
+
+---
+
+## 🎯 Project Goals
+
+Traffic Route Engine was designed to explore how shortest-path algorithms behave when a road network is no longer static.
+
+The project focuses on the transition from:
+
+```text
+Static Graph
+     |
+     v
+Shortest Path
+     |
+     v
+Dynamic Graph
+     |
+     v
+Repeated Recalculation
+     |
+     v
+Selective Rerouting
+     |
+     v
+Incremental Shortest Path
+```
+
+The final system combines algorithmic routing, dynamic graph updates, incremental computation, real-world road data, interactive visualization, automated testing, and quantitative performance analysis into a single C++ routing engine.

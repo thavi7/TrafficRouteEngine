@@ -46,7 +46,7 @@
 				"_deps/sfml-build/lib/libsfml-network-s-d.a"
 			],
 			"targetId" : "sfml-network::@d7f79968b2699e7782cb",
-			"targetIndex" : 11,
+			"targetIndex" : 9,
 			"type" : "target"
 		}
 	],

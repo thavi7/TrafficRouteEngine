@@ -70,9 +70,7 @@
 					"targetIndexes" : 
 					[
 						1,
-						2,
-						3,
-						4
+						2
 					]
 				},
 				{
@@ -82,7 +80,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build-Debug-54304c89a8baaae96200.json",
+					"jsonFile" : "directory-_deps.sfml-build-Debug-d89f156f5af871ddecdb.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -119,7 +117,7 @@
 					],
 					"build" : "_deps/sfml-build/src/SFML/System",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.System-Debug-5d29f6183ac42ac5903c.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.System-Debug-578cb62a638d3f35e7c0.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -129,13 +127,13 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/System",
 					"targetIndexes" : 
 					[
-						12
+						10
 					]
 				},
 				{
 					"build" : "_deps/sfml-build/src/SFML/Main",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Main-Debug-8a7549f4d6c41f461c7a.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Main-Debug-c2fe3f777dd655f96160.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -145,7 +143,7 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Main",
 					"targetIndexes" : 
 					[
-						10
+						8
 					]
 				},
 				{
@@ -156,7 +154,7 @@
 					],
 					"build" : "_deps/sfml-build/src/SFML/Window",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Window-Debug-904e99b76e29c7278ab1.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Window-Debug-2ccf8193f5e800722dc1.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -166,13 +164,13 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Window",
 					"targetIndexes" : 
 					[
-						13
+						11
 					]
 				},
 				{
 					"build" : "_deps/sfml-build/src/SFML/Network",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Network-Debug-94a9fa64aa7edbfa90a6.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Network-Debug-86134c8068022a9b0690.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -182,7 +180,7 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Network",
 					"targetIndexes" : 
 					[
-						11
+						9
 					]
 				},
 				{
@@ -192,7 +190,7 @@
 						8
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Graphics-Debug-efbc5c9d1eabde93372f.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Graphics-Debug-fafed05c99013d9a34bd.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -202,7 +200,7 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Graphics",
 					"targetIndexes" : 
 					[
-						9
+						7
 					]
 				},
 				{
@@ -212,7 +210,7 @@
 					],
 					"build" : "_deps/freetype-build",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.freetype-build-Debug-2eb6f422a50d2e7f75c9.json",
+					"jsonFile" : "directory-_deps.freetype-build-Debug-8570e9d5401404df8127.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -222,7 +220,7 @@
 					"source" : "out/build/Custom configure preset/_deps/freetype-src",
 					"targetIndexes" : 
 					[
-						6
+						4
 					]
 				},
 				{
@@ -238,7 +236,7 @@
 						15
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Audio-Debug-3bece267660cd90b36a4.json",
+					"jsonFile" : "directory-_deps.sfml-build.src.SFML.Audio-Debug-1a446c35e69f2ed67cc1.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.24"
@@ -248,13 +246,13 @@
 					"source" : "out/build/Custom configure preset/_deps/sfml-src/src/SFML/Audio",
 					"targetIndexes" : 
 					[
-						8
+						6
 					]
 				},
 				{
 					"build" : "_deps/ogg-build",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.ogg-build-Debug-f8ff950a2851129498db.json",
+					"jsonFile" : "directory-_deps.ogg-build-Debug-5ca7618895f8b4c3e7ef.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -264,7 +262,7 @@
 					"source" : "out/build/Custom configure preset/_deps/ogg-src",
 					"targetIndexes" : 
 					[
-						7
+						5
 					]
 				},
 				{
@@ -328,7 +326,7 @@
 					"source" : "out/build/Custom configure preset/_deps/flac-src/microbench",
 					"targetIndexes" : 
 					[
-						5
+						3
 					]
 				},
 				{
@@ -350,7 +348,7 @@
 				{
 					"build" : "_deps/vorbis-build/lib",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.vorbis-build.lib-Debug-4e7c37153d86a76c06d5.json",
+					"jsonFile" : "directory-_deps.vorbis-build.lib-Debug-179a4fd7c9d272fe8370.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.8.12"
@@ -360,9 +358,9 @@
 					"source" : "out/build/Custom configure preset/_deps/vorbis-src/lib",
 					"targetIndexes" : 
 					[
-						14,
-						15,
-						16
+						12,
+						13,
+						14
 					]
 				}
 			],
@@ -386,9 +384,7 @@
 					"targetIndexes" : 
 					[
 						1,
-						2,
-						3,
-						4
+						2
 					]
 				},
 				{
@@ -421,12 +417,12 @@
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
+						6,
+						7,
 						8,
 						9,
 						10,
-						11,
-						12,
-						13
+						11
 					]
 				},
 				{
@@ -442,7 +438,7 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						6
+						4
 					]
 				},
 				{
@@ -454,7 +450,7 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						7
+						5
 					]
 				},
 				{
@@ -470,7 +466,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						5
+						3
 					]
 				},
 				{
@@ -483,9 +479,9 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						14,
-						15,
-						16
+						12,
+						13,
+						14
 					]
 				}
 			],
@@ -501,22 +497,8 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "HybridBenchmark::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-HybridBenchmark-Debug-b34bf47529802dda38b7.json",
+					"jsonFile" : "target-HybridBenchmark-Debug-adeb1c33be1bf146aefc.json",
 					"name" : "HybridBenchmark",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "LPABenchmark::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LPABenchmark-Debug-1dc917c3408607359450.json",
-					"name" : "LPABenchmark",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "SelectiveAstar::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SelectiveAstar-Debug-1bac003b9c53ad730ce5.json",
-					"name" : "SelectiveAstar",
 					"projectIndex" : 0
 				},
 				{
@@ -550,7 +532,7 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "sfml-audio::@a153e5727587c53fce98",
-					"jsonFile" : "target-sfml-audio-Debug-d50b9506c0712429398b.json",
+					"jsonFile" : "target-sfml-audio-Debug-f194f73e36b4de2dd86f.json",
 					"name" : "sfml-audio",
 					"projectIndex" : 1
 				},
