@@ -49,6 +49,12 @@
 },
 {
   "directory": "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset",
+  "command": "C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\c++.exe -DSFML_STATIC -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization -I\"C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/include\" -g -std=gnu++17 -o CMakeFiles\\TrafficRouteEngine.dir\\src\\OSMLoader.cpp.obj -c C:\\PROJECT\\TrafficRouteEngine\\src\\OSMLoader.cpp",
+  "file": "C:/PROJECT/TrafficRouteEngine/src/OSMLoader.cpp",
+  "output": "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/CMakeFiles/TrafficRouteEngine.dir/src/OSMLoader.cpp.obj"
+},
+{
+  "directory": "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset",
   "command": "C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\c++.exe -DSFML_STATIC -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization -I\"C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/include\" -g -std=gnu++17 -o CMakeFiles\\TrafficRouteEngine.dir\\visualization\\Visualizer.cpp.obj -c C:\\PROJECT\\TrafficRouteEngine\\visualization\\Visualizer.cpp",
   "file": "C:/PROJECT/TrafficRouteEngine/visualization/Visualizer.cpp",
   "output": "C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj"

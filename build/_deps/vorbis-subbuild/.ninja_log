@@ -1,0 +1,21 @@
+# ninja log v7
+2	133	8135404677106852	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	24c57e541cdccf07
+2	133	8135404677106852	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	24c57e541cdccf07
+134	18909	8135404864838177	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	68c6582e4c82d322
+134	18909	8135404864838177	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	68c6582e4c82d322
+18909	19106	8135404864939350	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	5d5ddd43ef0854f1
+18909	19106	8135404864939350	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	5d5ddd43ef0854f1
+19107	19235	8135404868122208	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	bc801dbc758d8a
+19107	19235	8135404868122208	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	bc801dbc758d8a
+19235	19336	8135404869133993	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	2ed725f26739d391
+19235	19336	8135404869133993	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	2ed725f26739d391
+19336	19432	8135404870095037	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	711db9f61701d077
+19336	19432	8135404870095037	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	711db9f61701d077
+19432	19524	8135404871022192	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	50582ab224112b26
+19432	19524	8135404871022192	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	50582ab224112b26
+19525	19619	8135404871968087	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	4ded0e5511e52ccc
+19525	19619	8135404871968087	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	4ded0e5511e52ccc
+19619	19766	8135404873428476	CMakeFiles/vorbis-populate-complete	636787b096e6bb85
+19619	19766	8135404873428476	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	636787b096e6bb85
+19619	19766	8135404873428476	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate-complete	636787b096e6bb85
+19619	19766	8135404873428476	C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	636787b096e6bb85

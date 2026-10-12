@@ -1,3 +1,21 @@
 # ninja log v7
 5	219	8135225160656140	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	ea9f59e0da4d9eb4
 5	219	8135225160656140	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	ea9f59e0da4d9eb4
+3	11432	8135404259247791	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	810c50554dcd6ed5
+3	11432	8135404259247791	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	810c50554dcd6ed5
+11432	11652	8135404259333016	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	70c18380d8010fb5
+11432	11652	8135404259333016	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	70c18380d8010fb5
+11652	11769	8135404262637014	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	a8a4fea60902995a
+11652	11769	8135404262637014	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	a8a4fea60902995a
+11769	11901	8135404263908610	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	e33591d13307dbcf
+11769	11901	8135404263908610	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	e33591d13307dbcf
+11901	12026	8135404265206785	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	5f55794a964c84c8
+11901	12026	8135404265206785	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	5f55794a964c84c8
+12027	12129	8135404266240748	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	d4c7f14eb1030d4c
+12027	12129	8135404266240748	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	d4c7f14eb1030d4c
+12130	12235	8135404267297824	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	510d48fcae2d12f4
+12130	12235	8135404267297824	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	510d48fcae2d12f4
+12236	12388	8135404268823875	CMakeFiles/freetype-populate-complete	5cc92df7a6e3967d
+12236	12388	8135404268823875	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	5cc92df7a6e3967d
+12236	12388	8135404268823875	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/CMakeFiles/freetype-populate-complete	5cc92df7a6e3967d
+12236	12388	8135404268823875	C:/PROJECT/TrafficRouteEngine/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	5cc92df7a6e3967d

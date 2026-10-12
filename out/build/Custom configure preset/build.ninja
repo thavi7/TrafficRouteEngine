@@ -129,6 +129,16 @@ build CMakeFiles/TrafficRouteEngine.dir/src/LPAStar.cpp.obj: CXX_COMPILER__Traff
   OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
 
+build CMakeFiles/TrafficRouteEngine.dir/src/OSMLoader.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_Debug C$:/PROJECT/TrafficRouteEngine/src/OSMLoader.cpp || cmake_object_order_depends_target_TrafficRouteEngine
+  CONFIG = Debug
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\TrafficRouteEngine.dir\src\OSMLoader.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/PROJECT/TrafficRouteEngine/include -IC:/PROJECT/TrafficRouteEngine/src -IC:/PROJECT/TrafficRouteEngine/visualization -I"C:/PROJECT/TrafficRouteEngine/out/build/Custom configure preset/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\TrafficRouteEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles\TrafficRouteEngine.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\TrafficRouteEngine.dir
+
 build CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj: CXX_COMPILER__TrafficRouteEngine_unscanned_Debug C$:/PROJECT/TrafficRouteEngine/visualization/Visualizer.cpp || cmake_object_order_depends_target_TrafficRouteEngine
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
@@ -147,7 +157,7 @@ build CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj: CXX_CO
 #############################################
 # Link the executable TrafficRouteEngine.exe
 
-build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_Debug CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/LPAStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libfreetyped.a || _deps/sfml-build/lib/libfreetyped.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build TrafficRouteEngine.exe: CXX_EXECUTABLE_LINKER__TrafficRouteEngine_Debug CMakeFiles/TrafficRouteEngine.dir/src/main.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Edge.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Node.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Graph.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/Dijkstra.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/AStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/GraphGenerator.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/LPAStar.cpp.obj CMakeFiles/TrafficRouteEngine.dir/src/OSMLoader.cpp.obj CMakeFiles/TrafficRouteEngine.dir/visualization/Visualizer.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libfreetyped.a || _deps/sfml-build/lib/libfreetyped.a _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/sfml-build/lib/libsfml-window-s-d.a  _deps/sfml-build/lib/libsfml-system-s-d.a  -lopengl32  -lwinmm  -lgdi32  _deps/sfml-build/lib/libfreetyped.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

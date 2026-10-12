@@ -30,6 +30,7 @@ add_executable(TrafficRouteEngine
     src/AStar.cpp
     src/GraphGenerator.cpp
     src/LPAStar.cpp
+    src/OSMLoader.cpp
     visualization/Visualizer.cpp
 )
 
@@ -38,11 +39,11 @@ target_link_libraries(TrafficRouteEngine PRIVATE
 )
 
 add_executable(HybridBenchmark
-tests/HybridBenchmark.cpp
-src/Edge.cpp
-src/Node.cpp
-src/Graph.cpp
-src/AStar.cpp
-src/GraphGenerator.cpp
-src/LPAStar.cpp
+    tests/HybridBenchmark.cpp
+    src/Edge.cpp
+    src/Node.cpp
+    src/Graph.cpp
+    src/AStar.cpp
+    src/GraphGenerator.cpp
+    src/LPAStar.cpp
 )

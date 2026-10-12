@@ -5051,3 +5051,1612 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/FindPkgConfig.cmake:517 (find_program)"
+      - "build/_deps/freetype-src/CMakeLists.txt:251 (include)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config.bat"
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files/Java/jdk-24/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/apache-maven-3.9.12-bin/apache-maven-3.9.12/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python310/"
+      - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/LENOVO/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/LENOVO/AppData/Roaming/npm/"
+      - "C:/Program Files (x86)/Eclipse/Sumo/bin/"
+      - "C:/web devolopment/DATABASE/MongoSH/"
+      - "C:/Users/LENOVO/go/bin/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2026.2.3/bin/"
+      - "C:/Users/LENOVO/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/sbin/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/bin/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/sbin/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/"
+    searched_directories:
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config.bat.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config.bat.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config.bat"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkg-config"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/pkgconf"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config.bat.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config.bat.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config.bat"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkg-config"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkgconf.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkgconf.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/pkgconf"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config.bat.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config.bat.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config.bat"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkg-config"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkgconf.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkgconf.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/pkgconf"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config.bat.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config.bat.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config.bat"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkg-config"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkgconf.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkgconf.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/pkgconf"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config.bat.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config.bat.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config.bat"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkg-config"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkgconf.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkgconf.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/pkgconf"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config.bat.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config.bat.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config.bat"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkg-config"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkgconf.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkgconf.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/pkgconf"
+      - "C:/Windows/SysWOW64/pkg-config.bat.com"
+      - "C:/Windows/SysWOW64/pkg-config.bat.exe"
+      - "C:/Windows/SysWOW64/pkg-config.bat"
+      - "C:/Windows/SysWOW64/pkg-config.com"
+      - "C:/Windows/SysWOW64/pkg-config.exe"
+      - "C:/Windows/SysWOW64/pkg-config"
+      - "C:/Windows/SysWOW64/pkgconf.com"
+      - "C:/Windows/SysWOW64/pkgconf.exe"
+      - "C:/Windows/SysWOW64/pkgconf"
+      - "C:/Windows/pkg-config.bat.com"
+      - "C:/Windows/pkg-config.bat.exe"
+      - "C:/Windows/pkg-config.bat"
+      - "C:/Windows/pkg-config.com"
+      - "C:/Windows/pkg-config.exe"
+      - "C:/Windows/pkg-config"
+      - "C:/Windows/pkgconf.com"
+      - "C:/Windows/pkgconf.exe"
+      - "C:/Windows/pkgconf"
+      - "C:/Windows/SysWOW64/wbem/pkg-config.bat.com"
+      - "C:/Windows/SysWOW64/wbem/pkg-config.bat.exe"
+      - "C:/Windows/SysWOW64/wbem/pkg-config.bat"
+      - "C:/Windows/SysWOW64/wbem/pkg-config.com"
+      - "C:/Windows/SysWOW64/wbem/pkg-config.exe"
+      - "C:/Windows/SysWOW64/wbem/pkg-config"
+      - "C:/Windows/SysWOW64/wbem/pkgconf.com"
+      - "C:/Windows/SysWOW64/wbem/pkgconf.exe"
+      - "C:/Windows/SysWOW64/wbem/pkgconf"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config.bat.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config.bat.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config.bat"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkg-config"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkgconf.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkgconf.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/pkgconf"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config.bat.com"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config.bat.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config.bat"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config.com"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/pkg-config"
+      - "C:/Windows/SysWOW64/OpenSSH/pkgconf.com"
+      - "C:/Windows/SysWOW64/OpenSSH/pkgconf.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/pkgconf"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config.bat.com"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config.bat.exe"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config.bat"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config.com"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config.exe"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkg-config"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkgconf.com"
+    found: "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/pkgconf.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\LENOVO\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\LENOVO\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Java\\jdk-24\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\apache-maven-3.9.12-bin\\apache-maven-3.9.12\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\LENOVO\\AppData\\Roaming\\npm"
+        - "C:\\Program Files (x86)\\Eclipse\\Sumo\\bin"
+        - "C:\\web devolopment\\DATABASE\\MongoSH\\"
+        - "C:\\Users\\LENOVO\\go\\bin"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.2.3\\bin"
+        - "c:\\Users\\LENOVO\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/TrafficRouteEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32"
+        - "C:/Program Files (x86)/TrafficRouteEngine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFiles.cmake:201 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:57 (check_include_files)"
+    checks:
+      - "Looking for include file inttypes.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9pzeg8"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9pzeg8"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9pzeg8'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_749c4
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_749c4.dir/INCLUDE_INTTYPES_H.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9pzeg8/INCLUDE_INTTYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_749c4.dir/INCLUDE_INTTYPES_H.c.obj -o cmTC_749c4.exe -Wl,--out-implib,libcmTC_749c4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFiles.cmake:201 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:58 (check_include_files)"
+    checks:
+      - "Looking for include file stdint.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-olyzum"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-olyzum"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-olyzum'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_17684
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_17684.dir/INCLUDE_STDINT_H.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-olyzum/INCLUDE_STDINT_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_17684.dir/INCLUDE_STDINT_H.c.obj -o cmTC_17684.exe -Wl,--out-implib,libcmTC_17684.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFiles.cmake:201 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:59 (check_include_files)"
+    checks:
+      - "Looking for include file sys/types.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ajc4nq"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ajc4nq"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ajc4nq'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_8d1c7
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_8d1c7.dir/INCLUDE_SYS_TYPES_H.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ajc4nq/INCLUDE_SYS_TYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_8d1c7.dir/INCLUDE_SYS_TYPES_H.c.obj -o cmTC_8d1c7.exe -Wl,--out-implib,libcmTC_8d1c7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:462 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-kt9nns"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-kt9nns"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-kt9nns'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_ac05c
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_ac05c.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-kt9nns/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_ac05c.dir/CheckIncludeFile.c.obj -o cmTC_ac05c.exe -Wl,--out-implib,libcmTC_ac05c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:463 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2fllnb"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2fllnb"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2fllnb'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_cb8aa
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_cb8aa.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2fllnb/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_cb8aa.dir/CheckIncludeFile.c.obj -o cmTC_cb8aa.exe -Wl,--out-implib,libcmTC_cb8aa.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:464 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-77yn7y"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-77yn7y"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-77yn7y'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_48d0e
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_48d0e.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-77yn7y/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_48d0e.dir/CheckIncludeFile.c.obj -o cmTC_48d0e.exe -Wl,--out-implib,libcmTC_48d0e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int16_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-a5fn19"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-a5fn19"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-a5fn19'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_58070
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_58070.dir/INT16_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-a5fn19/INT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_58070.dir/INT16_SIZE.c.obj -o cmTC_58070.exe -Wl,--out-implib,libcmTC_58070.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:4 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint16_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-efdq9m"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-efdq9m"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-efdq9m'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_9422d
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_9422d.dir/UINT16_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-efdq9m/UINT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_9422d.dir/UINT16_SIZE.c.obj -o cmTC_9422d.exe -Wl,--out-implib,libcmTC_9422d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:5 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int16_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_e0f65
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_e0f65.dir/U_INT16_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c/U_INT16_SIZE.c
+        FAILED: [code=1] CMakeFiles/cmTC_e0f65.dir/U_INT16_SIZE.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_e0f65.dir/U_INT16_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c/U_INT16_SIZE.c
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c/U_INT16_SIZE.c:27:22: error: 'u_int16_t' undeclared here (not in a function); did you mean 'uint16_t'?
+           27 | #define SIZE (sizeof(u_int16_t))
+              |                      ^~~~~~~~~
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-djtj4c/U_INT16_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:6 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int32_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-c58up6"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-c58up6"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-c58up6'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_3e8a3
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_3e8a3.dir/INT32_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-c58up6/INT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_3e8a3.dir/INT32_SIZE.c.obj -o cmTC_3e8a3.exe -Wl,--out-implib,libcmTC_3e8a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:7 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint32_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hpqw8j"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hpqw8j"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hpqw8j'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_c2313
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_c2313.dir/UINT32_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hpqw8j/UINT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_c2313.dir/UINT32_SIZE.c.obj -o cmTC_c2313.exe -Wl,--out-implib,libcmTC_c2313.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:8 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int32_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_a83ad
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_a83ad.dir/U_INT32_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s/U_INT32_SIZE.c
+        FAILED: [code=1] CMakeFiles/cmTC_a83ad.dir/U_INT32_SIZE.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_a83ad.dir/U_INT32_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s/U_INT32_SIZE.c
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s/U_INT32_SIZE.c:27:22: error: 'u_int32_t' undeclared here (not in a function); did you mean 'uint32_t'?
+           27 | #define SIZE (sizeof(u_int32_t))
+              |                      ^~~~~~~~~
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7bhx2s/U_INT32_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:9 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int64_t"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hgj0ml"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hgj0ml"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT64_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hgj0ml'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_70fe1
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_70fe1.dir/INT64_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-hgj0ml/INT64_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_70fe1.dir/INT64_SIZE.c.obj -o cmTC_70fe1.exe -Wl,--out-implib,libcmTC_70fe1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:10 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of short"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-vk42or"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-vk42or"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SHORT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-vk42or'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_cff13
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_cff13.dir/SHORT_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-vk42or/SHORT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_cff13.dir/SHORT_SIZE.c.obj -o cmTC_cff13.exe -Wl,--out-implib,libcmTC_cff13.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:11 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9dasfp"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9dasfp"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9dasfp'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_077ce
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_077ce.dir/INT_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-9dasfp/INT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_077ce.dir/INT_SIZE.c.obj -o cmTC_077ce.exe -Wl,--out-implib,libcmTC_077ce.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:12 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xlbr2e"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xlbr2e"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xlbr2e'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_6d061
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_6d061.dir/LONG_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xlbr2e/LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_6d061.dir/LONG_SIZE.c.obj -o cmTC_6d061.exe -Wl,--out-implib,libcmTC_6d061.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:13 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long long"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-irupx5"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-irupx5"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-irupx5'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_a731b
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe    -o CMakeFiles/cmTC_a731b.dir/LONG_LONG_SIZE.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-irupx5/LONG_LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   CMakeFiles/cmTC_a731b.dir/LONG_LONG_SIZE.c.obj -o cmTC_a731b.exe -Wl,--out-implib,libcmTC_a731b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/flac-src/CMakeLists.txt:54 (find_program)"
+    mode: "program"
+    variable: "HAVE_GIT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/Git/mingw64/bin/"
+      - "C:/Program Files/Git/usr/bin/"
+      - "C:/Program Files/Java/jdk-24/bin/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Program Files/apache-maven-3.9.12-bin/apache-maven-3.9.12/bin/"
+      - "C:/Program Files/Go/bin/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python310/Scripts/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python310/"
+      - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Python/Python313/"
+      - "C:/Users/LENOVO/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/LENOVO/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/LENOVO/AppData/Local/Muse Hub/lib/"
+      - "C:/Users/LENOVO/AppData/Roaming/npm/"
+      - "C:/Program Files (x86)/Eclipse/Sumo/bin/"
+      - "C:/web devolopment/DATABASE/MongoSH/"
+      - "C:/Users/LENOVO/go/bin/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2026.2.3/bin/"
+      - "C:/Users/LENOVO/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/sbin/"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/bin/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/sbin/"
+      - "C:/Program Files (x86)/TrafficRouteEngine/"
+    searched_directories:
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/git.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/git.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/git"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/git.com"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/git.exe"
+      - "C:/Users/LENOVO/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/git"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/git.com"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/git.exe"
+      - "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot/bin/git"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/git"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/git.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/git.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/git"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/git.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/git.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/git"
+      - "C:/Windows/SysWOW64/git.com"
+      - "C:/Windows/SysWOW64/git.exe"
+      - "C:/Windows/SysWOW64/git"
+      - "C:/Windows/git.com"
+      - "C:/Windows/git.exe"
+      - "C:/Windows/git"
+      - "C:/Windows/SysWOW64/wbem/git.com"
+      - "C:/Windows/SysWOW64/wbem/git.exe"
+      - "C:/Windows/SysWOW64/wbem/git"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/git.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/git.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/git"
+      - "C:/Windows/SysWOW64/OpenSSH/git.com"
+      - "C:/Windows/SysWOW64/OpenSSH/git.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/git"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/git.com"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/git.exe"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/git"
+      - "C:/Program Files/dotnet/git.com"
+      - "C:/Program Files/dotnet/git.exe"
+      - "C:/Program Files/dotnet/git"
+      - "C:/Program Files/Git/cmd/git.com"
+    found: "C:/Program Files/Git/cmd/git.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\LENOVO\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\LENOVO\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\Git\\mingw64\\bin"
+        - "C:\\Program Files\\Git\\usr\\bin"
+        - "C:\\Program Files\\Java\\jdk-24\\bin"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\apache-maven-3.9.12-bin\\apache-maven-3.9.12\\bin"
+        - "C:\\Program Files\\Go\\bin"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot\\bin"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python310\\"
+        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\LENOVO\\AppData\\Local\\Muse Hub\\lib"
+        - "C:\\Users\\LENOVO\\AppData\\Roaming\\npm"
+        - "C:\\Program Files (x86)\\Eclipse\\Sumo\\bin"
+        - "C:\\web devolopment\\DATABASE\\MongoSH\\"
+        - "C:\\Users\\LENOVO\\go\\bin"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.2.3\\bin"
+        - "c:\\Users\\LENOVO\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/TrafficRouteEngine"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32"
+        - "C:/Program Files (x86)/TrafficRouteEngine"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/cmake/UseSystemExtensions.cmake:3 (check_c_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test HAVE_MBSTATE"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-5fdl9n"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-5fdl9n"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_MBSTATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-5fdl9n'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_acee5
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_MBSTATE  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_acee5.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-5fdl9n/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_acee5.dir/src.c.obj -o cmTC_acee5.exe -Wl,--out-implib,libcmTC_acee5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/cmake/UseSystemExtensions.cmake:16 (check_c_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test DODEFINE_EXTENSIONS"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-of376z"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-of376z"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DODEFINE_EXTENSIONS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-of376z'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_43f1c
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DDODEFINE_EXTENSIONS  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_43f1c.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-of376z/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_43f1c.dir/src.c.obj -o cmTC_43f1c.exe -Wl,--out-implib,libcmTC_43f1c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:111 (check_include_file)"
+    checks:
+      - "Looking for byteswap.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BYTESWAP_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_fcc38
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_fcc38.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz/CheckIncludeFile.c
+        FAILED: [code=1] CMakeFiles/cmTC_fcc38.dir/CheckIncludeFile.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_fcc38.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz/CheckIncludeFile.c
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-yoalmz/CheckIncludeFile.c:1:10: fatal error: byteswap.h: No such file or directory
+            1 | #include <byteswap.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:112 (check_include_file)"
+    checks:
+      - "Looking for inttypes.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-lj9x52"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-lj9x52"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-lj9x52'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_be39f
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_be39f.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-lj9x52/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_be39f.dir/CheckIncludeFile.c.obj -o cmTC_be39f.exe -Wl,--out-implib,libcmTC_be39f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:114 (check_include_file)"
+    checks:
+      - "Looking for stdbool.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-gvh2rv"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-gvh2rv"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDBOOL_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-gvh2rv'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_9988e
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_9988e.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-gvh2rv/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_9988e.dir/CheckIncludeFile.c.obj -o cmTC_9988e.exe -Wl,--out-implib,libcmTC_9988e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:115 (check_include_file)"
+    checks:
+      - "Looking for arm_neon.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_NEONINTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_5343d
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_5343d.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1/CheckIncludeFile.c
+        FAILED: [code=1] CMakeFiles/cmTC_5343d.dir/CheckIncludeFile.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_5343d.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1/CheckIncludeFile.c
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-7cqic1/CheckIncludeFile.c:1:10: fatal error: arm_neon.h: No such file or directory
+            1 | #include <arm_neon.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:124 (check_include_file)"
+    checks:
+      - "Looking for x86intrin.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jmd14z"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jmd14z"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_X86INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jmd14z'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_1790d
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_1790d.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jmd14z/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_1790d.dir/CheckIncludeFile.c.obj -o cmTC_1790d.exe -Wl,--out-implib,libcmTC_1790d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:127 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-m7l5gx"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-m7l5gx"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-m7l5gx'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_edcd8
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko -o CMakeFiles/cmTC_edcd8.dir/CheckFunctionExists.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-m7l5gx/CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko  CMakeFiles/cmTC_edcd8.dir/CheckFunctionExists.c.obj -o cmTC_edcd8.exe -Wl,--out-implib,libcmTC_edcd8.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:129 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP16"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-0znn91"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-0znn91"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP16"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-0znn91'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_de6e6
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_BSWAP16  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_de6e6.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-0znn91/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_de6e6.dir/src.c.obj -o cmTC_de6e6.exe -Wl,--out-implib,libcmTC_de6e6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:130 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP32"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2tnsyv"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2tnsyv"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2tnsyv'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_9bd79
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_BSWAP32  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_9bd79.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2tnsyv/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_9bd79.dir/src.c.obj -o cmTC_9bd79.exe -Wl,--out-implib,libcmTC_9bd79.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:131 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_LANGINFO_CODESET"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LANGINFO_CODESET"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_6a4cb
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_6a4cb.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff/src.c
+        FAILED: [code=1] CMakeFiles/cmTC_6a4cb.dir/src.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_6a4cb.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff/src.c
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-45gcff/src.c:2:14: fatal error: langinfo.h: No such file or directory
+            2 |     #include <langinfo.h>
+              |              ^~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:142 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WERROR_FLAG"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jhjtld"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jhjtld"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WERROR_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jhjtld'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_0d4c9
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_WERROR_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -Werror -o CMakeFiles/cmTC_0d4c9.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-jhjtld/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_0d4c9.dir/src.c.obj -o cmTC_0d4c9.exe -Wl,--out-implib,libcmTC_0d4c9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:143 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_DECL_AFTER_STMT_FLAG"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-r1f2l4"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-r1f2l4"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_DECL_AFTER_STMT_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-r1f2l4'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_2c442
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_DECL_AFTER_STMT_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -Wdeclaration-after-statement -o CMakeFiles/cmTC_2c442.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-r1f2l4/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_2c442.dir/src.c.obj -o cmTC_2c442.exe -Wl,--out-implib,libcmTC_2c442.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:144 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_STACKREALIGN_FLAG"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2pe88l"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2pe88l"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STACKREALIGN_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2pe88l'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_e8e34
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_STACKREALIGN_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -mstackrealign -o CMakeFiles/cmTC_e8e34.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-2pe88l/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_e8e34.dir/src.c.obj -o cmTC_e8e34.exe -Wl,--out-implib,libcmTC_e8e34.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:145 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WEFFCXX_FLAG"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-3b5iv7"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-3b5iv7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WEFFCXX_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-3b5iv7'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_f886a
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\c++.exe -DHAVE_WEFFCXX_FLAG  -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef   -std=gnu++17   -Weffc++ -o CMakeFiles/cmTC_f886a.dir/src.cxx.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-3b5iv7/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\c++.exe -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef  CMakeFiles/cmTC_f886a.dir/src.cxx.obj -o cmTC_f886a.exe -Wl,--out-implib,libcmTC_f886a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:3 (check_include_file)"
+    checks:
+      - "Looking for cpuid.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ve3jed"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ve3jed"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CPUID_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ve3jed'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_db92a
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_db92a.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ve3jed/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_db92a.dir/CheckIncludeFile.c.obj -o cmTC_db92a.exe -Wl,--out-implib,libcmTC_db92a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckIncludeFile.cmake:174 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:4 (check_include_file)"
+    checks:
+      - "Looking for sys/param.h"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-cgy1bh"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-cgy1bh"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_PARAM_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-cgy1bh'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_2c6b6
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_2c6b6.dir/CheckIncludeFile.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-cgy1bh/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_2c6b6.dir/CheckIncludeFile.c.obj -o cmTC_2c6b6.exe -Wl,--out-implib,libcmTC_2c6b6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:7 (check_function_exists)"
+    checks:
+      - "Looking for lround"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LROUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_29a3d
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround -o CMakeFiles/cmTC_29a3d.dir/CheckFunctionExists.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'lround'; expected 'long int(double)' [-Wbuiltin-declaration-mismatch]
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-bqolvj/CheckFunctionExists.c:1:1: note: 'lround' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround  CMakeFiles/cmTC_29a3d.dir/CheckFunctionExists.c.obj -o cmTC_29a3d.exe -Wl,--out-implib,libcmTC_29a3d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:6 (try_compile)"
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:18 (_CHECK_CPU_ARCH)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:13 (check_cpu_arch_x64)"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FLAC__CPU_X86_64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_0d0f8
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_0d0f8.dir/CheckCPUArch.c.obj -c C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c
+        FAILED: [code=1] CMakeFiles/cmTC_0d0f8.dir/CheckCPUArch.c.obj 
+        C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_0d0f8.dir/CheckCPUArch.c.obj -c C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c
+        C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c: In function 'main':
+        C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c:5:5: error: 'fail' undeclared (first use in this function)
+            5 |     fail
+              |     ^~~~
+        C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c:5:5: note: each undeclared identifier is reported only once for each function it appears in
+        C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c:5:9: error: expected ';' before '}' token
+            5 |     fail
+              |         ^
+              |         ;
+            6 | #endif
+            7 | }
+              | ~        
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:6 (try_compile)"
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:22 (_CHECK_CPU_ARCH)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:15 (check_cpu_arch_x86)"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FLAC__CPU_IA32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_d9344
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_d9344.dir/CheckCPUArch.c.obj -c C:/PROJECT/TrafficRouteEngine/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_d9344.dir/CheckCPUArch.c.obj -o cmTC_d9344.exe -Wl,--out-implib,libcmTC_d9344.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:101 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_ASSOC_MATH"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ni802w"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ni802w"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_ASSOC_MATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ni802w'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_a5bac
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DHAVE_ASSOC_MATH  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math -o CMakeFiles/cmTC_a5bac.dir/src.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-ni802w/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_a5bac.dir/src.c.obj -o cmTC_a5bac.exe -Wl,--out-implib,libcmTC_a5bac.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build/_deps/flac-src/microbench/CMakeLists.txt:6 (check_function_exists)"
+    checks:
+      - "Looking for clock_gettime"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xriaxq"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xriaxq"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CLOCK_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xriaxq'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_c3aea
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime -o CMakeFiles/cmTC_c3aea.dir/CheckFunctionExists.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-xriaxq/CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_c3aea.dir/CheckFunctionExists.c.obj -o cmTC_c3aea.exe -Wl,--out-implib,libcmTC_c3aea.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: [code=1] cmTC_c3aea.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_c3aea.dir/CheckFunctionExists.c.obj -o cmTC_c3aea.exe -Wl,--out-implib,libcmTC_c3aea.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/../lib/gcc/i686-w64-mingw32/15.2.0/../../../../i686-w64-mingw32/bin/ld.exe: cannot find -lrt: No error
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/share/cmake-4.3/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "build/_deps/vorbis-src/CMakeLists.txt:62 (check_library_exists)"
+    checks:
+      - "Looking for floor in m"
+    directories:
+      source: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx"
+      binary: "C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/PROJECT/TrafficRouteEngine/build/_deps/sfml-src/cmake/Modules/;C:/PROJECT/TrafficRouteEngine/build/_deps/vorbis-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx'
+        
+        Run Build Command(s): C:/winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7/mingw32/bin/ninja.exe -v cmTC_436a7
+        [1/2] C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=floor -o CMakeFiles/cmTC_436a7.dir/CheckFunctionExists.c.obj -c C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/PROJECT/TrafficRouteEngine/build/CMakeFiles/CMakeScratch/TryCompile-t7s6nx/CheckFunctionExists.c:1:1: note: 'floor' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\winlibs-i686-posix-dwarf-gcc-15.2.0-mingw-w64msvcrt-14.0.0-r7\\mingw32\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=floor  CMakeFiles/cmTC_436a7.dir/CheckFunctionExists.c.obj -o cmTC_436a7.exe -Wl,--out-implib,libcmTC_436a7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
